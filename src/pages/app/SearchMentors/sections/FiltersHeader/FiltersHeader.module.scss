@@ -1,0 +1,171 @@
+@use "../../../../../scss/variables" as *;
+@use "@styles/mixins" as *;
+@use "@styles/font" as *;
+
+.wrapper {
+  grid-area: resultsHeader;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.phraseRow {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.input {
+  background-color: $colour-base-200;
+  height: 40px;
+  width: 100%;
+  border-radius: 16px;
+  padding-left: 52px;
+  color: $colour-base-600;
+  border: 1px solid transparent;
+}
+
+.input:focus,
+.input:active {
+  border-color: $colour-base-400;
+  outline: none;
+}
+
+.icon {
+  position: absolute;
+  top: 10px;
+  left: 16px;
+  width: 20px;
+  height: 20px;
+  color: $colour-base-600;
+  fill: $colour-base-600;
+}
+
+.tags {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: $colour-base-800;
+  fill: $colour-base-800;
+  font-size: 12px;
+  line-height: 21.6px;
+  font-weight: 600;
+  font-family: $font-family-montserrat;
+  background-color: $colour-base-200;
+  border: none;
+  border-radius: 22px;
+  padding: 11px 16px;
+
+  &.clear {
+    background-color: transparent;
+    color: $colour-error-100;
+    cursor: pointer;
+  }
+
+  svg {
+    width: 16px;
+    height: 16px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+
+.resultsSummaryRow {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $xl) {
+    flex-direction: row;
+    gap: 24px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .inlineRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .text {
+    color: $colour-base-800;
+    font-size: 14px;
+    line-height: 25.2px;
+    font-family: $font-family-montserrat;
+    font-weight: 600;
+  }
+}
+
+.filterToggle {
+  align-items: center;
+  background-color: rgba($primary-color, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  padding: 8px;
+  width: 52px;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: rgba($primary-color, 0.2);
+  }
+
+  &:active {
+    background-color: rgba($primary-color, 0.3);
+  }
+
+  @media (min-width: $xl) {
+    display: none;
+  }
+}
+
+.filterIcon {
+  color: $primary-color;
+  width: 20px;
+  height: 20px;
+  font-size: 20px;
+}
+
+.select {
+  height: 40px;
+  width: 208px;
+
+  & div {
+    @extend %text-body-2;
+    color: $colour-base-800;
+  }
+
+  :global {
+    .css-t3ipsp-control,
+    .css-13cymwt-control {
+      height: 40px !important;
+    }
+
+    .css-1nmdiq5-menu {
+      padding-top: 0 !important;
+    }
+
+    .css-1jqq78o-placeholder {
+      font-size: 14px !important;
+      color: $colour-base-600 !important;
+    }
+
+    .css-qbdosj-Input {
+      height: 30px !important;
+    }
+  }
+}

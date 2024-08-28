@@ -1,0 +1,36 @@
+@use '../../scss/variables' as *;
+
+.label {
+	margin-bottom: 19px;
+}
+
+.options {
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+
+	> * {
+		grid-column: 1/-1;
+    
+    @media screen and (min-width: $sm) {
+      grid-column: span 3;
+    }
+   
+    @media screen and (min-width: $md) {
+      grid-column: span 2;
+    }
+	}
+}
+
+.more{
+  display: block;
+  max-width: max-content;
+  margin-top: 15px;
+  background-color: transparent;
+  color: #1176FF;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration-line: underline;
+  cursor: pointer;
+}

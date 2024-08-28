@@ -1,0 +1,26 @@
+@use '../../../scss/variables' as *;
+
+.grid {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 32px;
+  margin-bottom: 36px;
+
+  @media (min-width: $xl) {
+    grid-template-areas: "sidebar resultsHeader" "sidebar results";
+    grid-template-columns: 205px auto;
+    column-gap: 49px;
+    margin-top: 40px;
+  }
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 48px;
+}

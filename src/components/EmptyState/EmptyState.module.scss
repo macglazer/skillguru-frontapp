@@ -1,0 +1,35 @@
+@use "@styles/variables" as *;
+@use "@styles/mixins" as *;
+@use "@styles/font" as *;
+
+.emptyState {
+  max-width: 352px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 16px;
+  margin: 40px auto 48px;
+
+  div {
+    background-color: #ffe7e0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+  }
+
+  svg {
+    font-size: 18px;
+    width: 18px;
+    height: 18px;
+    color: $colour-secondary;
+  }
+
+  p {
+    @extend %text-button-lg;
+    color: $colour-base-800;
+  }
+}

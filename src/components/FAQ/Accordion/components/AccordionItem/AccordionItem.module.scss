@@ -1,0 +1,44 @@
+@use "../../../../../scss/variables" as *;
+@use "../../../../../scss/font" as *;
+
+.wrapper {
+	.title {
+		@extend %text-button-md;
+		align-items: center;
+		background-color: transparent;
+		border-bottom: 1.5px solid #EBEBEB;
+		color: $secondary-color;
+		cursor: pointer;
+		display: flex;
+		gap: 20px;
+		justify-content: space-between;
+		padding: 20px;
+		text-align: left;
+		width: 100%;
+	}
+
+	.expander {
+		font-size: 24px;
+		transition: 0.6s;
+	}
+
+	.description {
+		@extend %text-button-sm;
+		color: $colour-base-800;
+		height: auto;
+		margin-top: 4px;
+		padding: 20px;
+		visibility: visible;
+	}
+
+	&[data-is-current="true"] {
+		.expander {
+			transform: rotate(90deg);
+		}
+	}
+
+	a.read-more-link {
+		color: #FF6A3D;
+		cursor: pointer;
+	}
+}

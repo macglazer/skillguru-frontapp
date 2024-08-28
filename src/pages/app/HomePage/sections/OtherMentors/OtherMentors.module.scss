@@ -1,0 +1,95 @@
+@use "../../../../../scss/variables" as *;
+@use "../../../../../scss/font" as *;
+
+.title {
+    @extend %text-subtitle-1;
+    color: $colour-primary;
+    margin-bottom: 24px;
+}
+
+.slick {
+    margin-left: -16px;
+    margin-right: -16px;
+    overflow: hidden;
+
+    .slickItem {
+        padding-left: 16px;
+        padding-right: 16px;
+        cursor: pointer;
+    }
+
+    :global(.slick-dots) {
+        position: relative;
+        bottom: 0;
+        padding: 24px 0;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px 16px;
+    border: 1px solid $colour-base-200;
+    border-radius: 12px;
+    justify-content: space-between;
+    transition: background-color;
+
+    &:hover {
+        background-color: $colour-base-200;
+    }
+
+    .user {
+        display: flex;
+        gap: 16px;
+
+        .img {
+            display: block;
+            object-fit: cover;
+            object-position: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+        }
+
+        div {
+            display: flex;
+            gap: 4px;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        h4 {
+            @extend %text-button-md;
+            color: $colour-primary;
+        }
+
+        p {
+            @extend %text-button-sm;
+            color: $colour-base-800;
+        }
+    }
+
+    .tags {
+        display: flex;
+        margin: 0;
+        list-style: none;
+        gap: 12px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        max-width: 90%;
+        flex-wrap: wrap;
+
+        .tag {
+            @extend %text-button-sm;
+            color: $colour-secondary;
+            padding: 8px 12px;
+            a {
+                @extend .tag;
+                color: $colour-secondary;
+                text-decoration: none;
+            }
+        }
+    }
+}

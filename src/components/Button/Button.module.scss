@@ -1,0 +1,111 @@
+@use '../../scss/variables' as *;
+@use '../../scss/font' as *;
+
+@mixin hover-effect($color) {
+	background-color: $color;
+	&:hover {
+		background-color: darken($color, 5%);
+	}
+	&:active {
+		background-color: darken($color, 10%);
+	}
+}
+
+.button {
+	display: block;
+	padding: 10px 30px;
+	border-radius: 100px;
+	text-align: center;
+	outline: transparent;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: 400;
+	cursor: pointer;
+	transition: background-color 0.24s, color 0.24s;
+	line-height: 180%;	
+
+	&.noWrap {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	&.FontButtonMd { 
+		@extend %text-button-md;
+	}
+
+	&Sm {
+		padding: 8px 30px;	
+	}
+
+	&Md {
+		padding: 10px 30px;
+	}
+
+	&Lg {
+		padding: 12px 30px;
+	}
+
+	&FullWidth {
+		width: 100%;
+	}
+
+	&[data-variant='danger-text'] {
+		@include hover-effect(#ffffff);
+		color: $colour-error-100;
+		background-color: transparent;
+	}
+
+	&[data-variant='danger-outline'] {
+		@include hover-effect(#ffffff);
+		color: $colour-error-100;
+		background-color: transparent;
+		border: 1px solid $colour-base-400;
+	}
+
+	&[data-variant='primary'] {
+		@include hover-effect($primary-color);
+		color: $light-color;
+
+		&:active {
+			background-color: $dark-color;
+		}
+	}
+	&[data-variant='primary-light'] {
+		@include hover-effect(rgba(255, 106, 61, 0.1));
+		color: $colour-secondary;
+		background-color: rgba($colour-secondary, .1);
+
+		&[disabled] {
+			color: #ccc;
+		}
+	}
+	&[data-variant='outline'] {
+		background-color: transparent;
+		color: $primary-color;
+		font-weight: 500;
+		border: 1px solid $primary-color;
+
+		&:hover {
+			background-color: $primary-color;
+			color: $light-color;
+		}
+	}
+	&[data-variant='light'] {
+		@include hover-effect($light-color);
+		background-color: $colour-base-200;
+		color: $colour-primary;
+	}
+	&[data-variant='dark'] {
+		@include hover-effect($dark-color);
+		color: $light-color;
+	}
+	&[data-variant='danger'] {
+		@include hover-effect(#F00);
+		color: $light-color;
+	}
+	&:disabled{
+		background-color: rgba($dark-color, .5)!important;
+		pointer-events: none;
+	}
+}

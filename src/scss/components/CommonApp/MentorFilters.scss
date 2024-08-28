@@ -1,0 +1,44 @@
+@use '../../variables' as *;
+
+.mentor-filters {
+	display: grid;
+	margin: 36px 0;
+	gap: 28px 20px;
+  grid-template-columns: repeat(12, 1fr);
+
+  > *{
+    grid-column: 1/-1;
+  }
+
+  &__search{
+    display: flex;
+    border: 1px solid rgba($gray-color, .5);
+    border-radius: 8px;
+    padding: 5px 8px;
+  }
+
+  @media screen and (min-width: $sm) {
+    > *{
+      grid-column: span 6;
+    }
+  }
+  @media screen and (min-width: $md) {
+    gap: 46px 16px;
+    > *{
+      grid-column: span 3;
+    }
+    
+    &__search{
+      grid-column: 1/7!important;
+    }
+    
+    &__sort{
+      grid-column: 9/13 !important;
+    }
+  }
+  @media screen and (min-width: $xl) {
+    > *{
+      grid-column: span 2;
+    }
+  }
+}

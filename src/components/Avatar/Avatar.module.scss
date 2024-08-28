@@ -1,0 +1,15 @@
+.avatar {
+   
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+  }
+  
+  .avatar img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      display: block;
+      object-position: center;
+  }

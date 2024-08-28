@@ -1,0 +1,103 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/font" as *;
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin: 43px 0 64px;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.header {
+    h2 {
+        @extend %text-heading-2;
+        color: $colour-primary;
+    }
+
+    h2 + p {
+        margin-top: 16px;
+    }
+
+    p {
+        @extend %text-button-md;
+        color: $colour-base-800;
+
+        a {
+            color: $colour-secondary;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.alert {
+    display: flex;
+    border: 1px solid $colour-error-100;
+    color: $colour-error-100;
+    background-color: $colour-error-200;
+    border-radius: 12px;
+    padding: 12px 16px;
+
+    p {
+        @extend %text-button-sm;
+    }
+}
+
+.alert2 {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: auto;
+    flex-direction: column;
+    padding: 40px 48px 48px;
+
+    .icon {
+        width: 48px;
+        height: 48px;
+        background-color: #FFE7E0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+
+        svg {
+            font-size: 18px;
+            color: $colour-secondary;
+        }
+    }
+  
+
+    p {
+        @extend %text-button-lg;
+        color: $colour-base-800;
+        max-width: 352px;
+        margin: auto;
+    }
+}
+
+.service {
+    text-transform: capitalize;
+}
+
+.isPro {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+
+    svg {
+        color: $colour-secondary;
+        font-size: 20px;
+    }
+}

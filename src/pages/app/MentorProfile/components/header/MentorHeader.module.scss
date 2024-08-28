@@ -1,0 +1,125 @@
+@use "../../../../../scss/variables" as *;
+@use "../../../../../scss/mixins" as *;
+@use "../../../../../scss/main" as *;
+
+.mobile, .desktop {
+    position: relative;
+}
+
+.desktop {
+    display: none;
+
+    @include media-lg-and-up {
+        display: block;
+    }
+}
+
+.mobile {
+    @include media-lg-and-up {
+        display: none;
+    }
+}
+
+.bg {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    min-height: 178px;
+
+    @include media-md-and-up {
+        min-height: 240px;
+    }
+}
+
+.bar { 
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 24px;
+    padding-left: 184px;
+}
+
+.bar2nd {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 21px;
+    width: 100%;
+    margin-top: 24px;
+}
+
+.bar2nd + .actions {
+    margin-top: 16px;
+}
+
+.avatar {
+    height: 160px;
+    width: 160px; 
+    overflow: hidden;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 40px;
+    border: 4px solid #fff;
+    box-shadow: 1px 1px 1px 1px rgba(16, 24, 40, 0.08);
+    position: absolute;
+    left: 0;
+    top: -60px;
+}
+
+.avatar img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.fullname {
+    @extend %text-heading-3;
+    color: $colour-primary; 
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.subtitle {
+    @extend %text-body-2;
+    color: $colour-base-800; 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+
+    .dot {
+        width: 8px;
+        height: 8px;
+        background-color: $colour-secondary;
+        display: block;
+        border-radius: 50%;
+    }
+}
+
+.location {
+    @extend %text-body-2;
+    color: $colour-base-800; 
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.desktop .languages {
+    margin: 24px 0;
+}

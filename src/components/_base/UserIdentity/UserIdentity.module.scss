@@ -1,0 +1,66 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/font" as *;
+
+.card {
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    box-sizing: border-box;
+    
+    &.fullWidth {
+        width: 100%;
+
+        .content {
+            width: 100%;
+            flex: 1;
+        }
+    }
+
+    &.noPadding {
+        padding: 0;
+    }
+}
+
+.avatar {
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.rate {
+    @extend %text-button-sm;
+    color: $colour-primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    min-width: 34px;
+}
+
+.title, .rate {
+    @extend %text-button-lg;
+    color: $colour-primary;
+}
+
+.subtitle {
+    @extend %text-caption;
+    color: $colour-base-600;
+    display: block;
+}

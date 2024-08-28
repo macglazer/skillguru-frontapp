@@ -8,6 +8,11 @@
 @forward './components/BlockedScreen.scss';
 @forward './components/Modal.scss';
 @forward './components/CardsSlider.scss';
+@forward './components/PlansPanel.scss';
+@forward './components/Input.scss';
+@forward './components/Checkbox.scss';
+@forward './components/Hours.scss';
+@forward './components/Calendar.scss';
 
 //Landing page styles
 @forward './components/LandingPage';
@@ -22,6 +27,17 @@
 @forward './components/CommonApp/InvestCard.scss';
 @forward './components/CommonApp/Card';
 @forward './components/CommonApp/CardNavigation';
+@forward './components/CommonApp/MentorCard';
+@forward './components/CommonApp/SessionCard';
+@forward './components/CommonApp/SessionModal';
+@forward './components/CommonApp/DayRadio';
+@forward './components/CommonApp/MentorFilters';
+@forward './components/CommonApp/Table';
+@forward './components/CommonApp/UserPhoto';
+@forward './components/CommonApp/ContactItem';
+@forward './components/CommonApp/Conversation';
+@forward './components/CommonApp/ChatBubble';
+@forward './components/CommonApp/ContactList';
 
 //App screens
 @forward './components/AppScreens/index';

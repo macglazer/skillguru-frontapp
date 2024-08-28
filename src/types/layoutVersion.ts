@@ -1,0 +1,1 @@
+export type LayoutVersion = 'default' | 'simple' | 'none' | 'auth';

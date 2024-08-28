@@ -1,0 +1,78 @@
+@use '../variables' as *;
+
+.input {
+	&__label {
+		&-text {
+			display: block;
+			color: $dark-color;
+			font-size: 18px;
+			font-weight: 600;
+			line-height: 150%;
+			margin-bottom: 10px;
+		}
+	}
+
+	&__field {
+		width: 100%;
+		border-radius: 6px;
+		border: 1px solid $new-gray-color;
+		background: #fff;
+		padding: 15px 10px 15px 22px;
+		color: $dark-color;
+		font-size: 16px;
+		font-weight: 400;
+		outline: transparent;
+		resize: vertical;
+	}
+
+	&__error {
+		display: block;
+		margin-top: 5px;
+		color: $danger-color;
+		font-size: 12px;
+		font-weight: 400;
+		min-height: 15px;
+		opacity: 0;
+		transition: opacity 0.24s;
+	}
+
+	&[data-status='error'] {
+		.input__field {
+			border: 1px solid $danger-color;
+		}
+
+		.input__error {
+			opacity: 1;
+		}
+	}
+
+	&[data-status='success'] {
+		.input__field {
+			border: 1px solid $success-color;
+		}
+	}
+
+	@media screen and (min-width: $md) {
+		&__label {
+			&-text {
+				margin-bottom: 17px;
+			}
+		}
+
+		&__field {
+			padding: 15px 10px 15px 31px;
+			font-size: 18px;
+		}
+
+		&__error {
+			min-height: 16px;
+			font-size: 16px;
+			margin-top: 15px;
+			line-height: 1em;
+		}
+	}
+}
+
+textarea.input__field {
+	min-height: clamp(180px, 20vw, 274px);
+}

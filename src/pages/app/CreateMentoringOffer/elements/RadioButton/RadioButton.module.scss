@@ -1,0 +1,29 @@
+@use "@styles/variables" as *;
+@use "@styles/mixins" as *;
+@use "@styles/font" as *;
+
+.radio {
+  @extend %text-button-md;
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  color: $colour-base-800;
+
+  &::before {
+    display: inline-block;
+    content: "";
+    padding: 5px;
+    box-shadow: 0 0 0 1px $colour-secondary;
+    width: 20px;
+    height: 20px;
+    border: 5px solid $colour-base-000;
+    border-radius: 50px;
+  }
+  &[data-variant="checked"]::before {
+    background-color: $colour-secondary;
+  }
+  & input {
+    display: none;
+  }
+}

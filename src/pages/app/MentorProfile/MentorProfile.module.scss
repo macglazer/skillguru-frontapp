@@ -1,0 +1,39 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/mixins" as *;
+@use "../../../scss/main.scss" as *;
+
+.onlyDesktopFlex {
+    display: none;
+
+    @include media-lg-and-up {
+        display: flex;
+    }
+}
+
+.onlyMobileFlex {
+    display: flex;
+
+    @include media-lg-and-up {
+        display: none;
+    }
+}
+
+.onlyDesktop {
+    display: none;
+
+    @include media-lg-and-up {
+        display: block;
+    }
+}
+
+.onlyMobile {
+    display: block;
+
+    @include media-lg-and-up {
+        display: none;
+    }
+}
+
+.socialLinksMobile {
+    margin-bottom: 32px;
+}

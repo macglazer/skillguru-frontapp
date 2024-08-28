@@ -1,0 +1,120 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/font" as *;
+
+.card {
+    border: 1px solid $colour-base-400;
+    border-radius: 16px;
+    background-color: transparent;
+    padding: 24px 24px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    cursor: pointer;
+
+    &.selected {
+        border-color: $colour-secondary;
+    }
+
+    &:hover {
+        background-color: $colour-base-200;
+    }
+}
+
+.rowTitle {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.crown {
+    color: $colour-secondary; 
+}
+
+.selected .rowTitle svg {
+    color: $colour-secondary;
+}
+
+.title {
+    @extend %text-button-md;
+    color: $colour-primary;
+}
+
+.subtitle {
+    @extend %text-caption;
+    color: $colour-base-800;
+    margin: 0;   
+    text-align: left;
+}
+
+.priceRow {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+    flex-wrap: wrap;
+    row-gap: 4px;
+
+    strong {
+        @extend %text-heading-3;
+    color: $colour-primary;
+    }
+
+    span {
+        @extend %text-button-md;
+        color: $colour-base-800;
+    }
+}
+
+.listRow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+
+    h6 {
+        @extend %text-button-md;
+        color: $colour-primary;
+        text-align: left;
+        width: 100%;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 12px;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 14px;
+        width: 100%;
+    }
+
+    svg {
+        width: 18px;
+        height: 18px;
+        color: $colour-primary;
+        border-radius: 50%;
+    }
+
+    span {
+        flex: 1;
+        @extend %text-caption;
+        color: $colour-base-800;
+    }
+}

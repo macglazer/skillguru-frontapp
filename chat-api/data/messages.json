@@ -1,0 +1,26 @@
+{
+    "1": [
+        { "id": "1", "fromId": "1", "text": "Cześć! Jak się masz?", "date": "2024-01-01 10:10" },
+        { "id": "2", "fromId": "0", "text": "Cześć John! Wszystko w porządku, a Ty?", "date": "2024-01-01 10:20" },
+        { "id": "3", "fromId": "1", "text": "Mam się dobrze, dziękuję. Co u Ciebie słychać?", "date": "2024-01-01 10:30" },
+        { "id": "4", "fromId": "0", "text": "Pracuję nad nowym projektem, jest bardzo interesujący.", "date": "2024-01-01 10:34" },
+        { "id": "5", "fromId": "1", "text": "To świetnie! Jakie są Twoje plany na weekend?", "date": "2024-01-01 10:40" },
+        { "id": "6", "fromId": "0", "text": "Myślę o wyjeździe za miasto. A Ty?", "date": "2024-01-01 10:45" },
+        { "id": "7", "fromId": "1", "text": "Też mam takie plany. Może wybierzemy się razem?", "date": "2024-01-01 10:47" },
+        { "id": "8", "fromId": "0", "text": "Brzmi świetnie! Gdzie chciałbyś pojechać?", "date": "2024-01-01 10:48" },
+        { "id": "9", "fromId": "1", "text": "Myślałem o górach. Lubisz wędrówki?", "date": "2024-01-01 10:50" },
+        { "id": "10", "fromId": "0", "text": "Tak, bardzo! To będzie wspaniała przygoda.", "date": "2024-01-01 11:00" }
+    ],
+    "2": [
+        { "id": "11", "fromId": "2", "text": "Cześć! Jak minął Ci dzień?", "date": "2024-01-01 10:10" },
+        { "id": "12", "fromId": "0", "text": "Cześć Jane! Był dość pracowity, a Twój?", "date": "2024-01-01 10:20" },
+        { "id": "13", "fromId": "2", "text": "Był całkiem spokojny. Pracowałam zdalnie.", "date": "2024-01-01 10:30" },
+        { "id": "14", "fromId": "0", "text": "To dobrze. Praca zdalna ma swoje plusy.", "date": "2024-01-01 10:34" },
+        { "id": "15", "fromId": "2", "text": "Tak, zgadzam się. Jakie masz plany na wieczór?", "date": "2024-01-01 10:40" },
+        { "id": "16", "fromId": "0", "text": "Myślałem o obejrzeniu filmu. Masz jakieś rekomendacje?", "date": "2024-01-01 10:45" },
+        { "id": "17", "fromId": "2", "text": "Słyszałam, że nowy film akcji jest świetny. Może ten?", "date": "2024-01-01 10:47" },
+        { "id": "18", "fromId": "0", "text": "Brzmi interesująco! Dzięki za podpowiedź.", "date": "2024-01-01 10:48" },
+        { "id": "19", "fromId": "2", "text": "Nie ma za co. Miłego wieczoru!", "date": "2024-01-01 10:50" },
+        { "id": "20", "fromId": "0", "text": "Tobie również, Testr!", "date": "2024-01-01 11:00" }
+    ]
+}

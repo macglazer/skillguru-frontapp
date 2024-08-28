@@ -1,0 +1,51 @@
+@use "@styles/variables" as *;
+@use "@styles/mixins" as *;
+@use "@styles/font" as *;
+
+.info {
+  @extend %text-body-2;
+  color: $colour-base-800;
+  margin-bottom: 1.5rem;
+}
+.container {
+  //position: relative;
+}
+.loading {
+  position: absolute;
+  top: 90px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($colour-base-000, 0.6)
+}
+.flexContainer {
+  display: flex;
+  flex-direction: column;
+
+  @include media-md-and-up {
+    flex-direction: row;
+    gap: 24px;
+  }
+}
+
+.btnPrimary {
+  @include media-md-and-up {
+    order: 2;
+  }
+}
+
+.modal {
+  & h3 {
+    margin-top: 60px;
+    color: $colour-primary;
+  }
+}
+
+.modalContent {
+  width: 100%;
+  max-width: 516px;
+  margin: 20px;
+  @include media-md-and-up {
+    width: 516px;
+  }
+}

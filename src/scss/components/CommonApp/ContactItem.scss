@@ -1,0 +1,22 @@
+@use '../../variables' as *;
+
+.contact-item{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  border: none;
+  background-color: transparent;
+  padding: 0 24px 0 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color .24s;
+
+  &:hover{
+    background-color: rgba($gray-color, .25);
+  }
+
+  &__name{
+    font-size: 20px;
+    font-weight: 700;
+  }
+}

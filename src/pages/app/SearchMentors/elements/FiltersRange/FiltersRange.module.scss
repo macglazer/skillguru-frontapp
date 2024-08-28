@@ -1,0 +1,71 @@
+@use '../../../../../scss/variables' as *;
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 27.31px;
+    width: 100%;
+    padding-bottom: 25px;
+}
+
+.row {
+    width: 100%;
+}
+
+.cols {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.label {
+    color: #56658F;
+    font-family: $font-family-montserrat;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 21.6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input {
+    align-items: center;
+    border-radius: 5.46px;
+    border: 0.66px solid $new-gray-color; 
+    color: $secondary-color;
+    display: flex;
+    font-family: $font-family-poppins;
+    font-size: 13.65px;
+    font-weight: 600;
+    height: 36px;
+    justify-content: center;
+    line-height: 20.48px;
+    padding: 4px 8px;
+    width: 55px;
+    text-align: center;
+}
+
+.range[class^="range-slider"] {
+    background-color: $new-gray-color;
+    height: 4px;
+
+    [class^="range-slider__thumb"] {
+        background-color: $primary-color;
+        width: 12px;
+        height: 12px;
+    }
+
+    [class^="range-slider__range"] {    
+        background-color: $primary-color;
+    }
+}

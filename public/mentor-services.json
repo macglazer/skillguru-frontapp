@@ -1,0 +1,28 @@
+{
+    "mentoring": [
+        {
+            "id": "012337122343",
+            "title": "Plan podstawowy KING",
+            "subtitle": "Rozpocznij lub rozwijaj swoją karierę z moją pomocą.",
+            "price": 15000,
+            "variant": "",
+            "descriptionRows": [
+                "2 sesje mentoringowe na miesiąc",
+                "Nieograniczony dostęp do pytań i odpowiedzi",
+                "Odpowiedzi na Twoje pytania w ciągu 2 dni"
+            ]
+        },
+        {
+            "id": "01233757234432343",
+            "title": "Plan pro",
+            "subtitle": "Rozpocznij lub rozwijaj swoją karierę z moją pomocą.",
+            "price": 30000,
+            "variant": "pro",
+            "descriptionRows": [
+                "2 sesje mentoringowe na miesiąc",
+                "Nieograniczony dostęp do pytań i odpowiedzi",
+                "Odpowiedzi na Twoje pytania w ciągu 2 dni"
+            ]
+        }
+    ]
+}

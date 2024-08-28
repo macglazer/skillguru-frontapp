@@ -1,0 +1,47 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/font" as *;
+
+.card {
+    padding: 8px 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px; /* 16px */
+
+    &.noPadding {
+        padding: 0;
+    }
+
+    &.pillBg {
+        background-color: $colour-base-200;
+        border-radius: 50px;
+    }
+
+    svg {
+        color: $colour-secondary;
+        font-size: 24px;
+        width: 24px;
+        height: 24px;
+        order: 2;
+    }
+
+    .text {
+        color: $colour-primary;
+
+        &.textButtonMd {
+            @extend %text-button-md;
+        }
+
+        &.textSubtitle1 {
+            @extend %text-subtitle-1;
+        }
+
+        &.leading {
+            order: 3;
+        }
+
+        &.trailing {
+            order: 1;
+        }
+    }
+}

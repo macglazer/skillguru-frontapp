@@ -1,0 +1,30 @@
+@use '../../../../../scss/variables' as *;
+
+.wrapper {
+    grid-area: results;
+}
+
+.mentorsList {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	padding-bottom: 72px;
+}
+
+.loadMore {
+	margin: 40px auto 10px;
+}
+
+.errorMsg {
+	color: $colour-error-100;
+	background-color: $gray-color;
+	padding: 36px 24px;
+	font-size: 14px;
+	line-height: 28px;
+}
+
+.spinner_wrapper {
+	
+}
+
+.spinner {}

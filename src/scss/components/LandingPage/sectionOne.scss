@@ -14,7 +14,6 @@
 		padding-bottom: 96px;
 	}
 
-
 	&__title {
 		@include roboto;
 		font-size: map-get($font-size, 'xxl');
@@ -70,24 +69,24 @@
 			font-size: 56px;
 		}
 
-    &__text{
-      margin-top: 32px;
-    }
+		&__text {
+			margin-top: 32px;
+		}
 	}
 
 	@media screen and (min-width: map-get($breakpoints, 'lg')) {
 		.container {
-			padding-top: 86px;
+			padding-top: 64px;
 			padding-bottom: 184px;
 		}
-		
+
 		&__title {
 			font-size: 64px;
 		}
 
-    &__text{
-      margin-top: 44px;
-    }
+		&__text {
+			margin-top: 44px;
+		}
 	}
 
 	@media screen and (min-width: map-get($breakpoints, 'xl')) {
@@ -100,10 +99,10 @@
 			font-size: 88px;
 		}
 
-    &__text{
-      max-width: 460px;
-      margin-top: 56px;
+		&__text {
+			max-width: 460px;
+			margin-top: 56px;
 			font-size: map-get($font-size, 'md');
-    }
+		}
 	}
 }

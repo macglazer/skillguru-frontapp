@@ -8,6 +8,10 @@ $columns: 12;
   max-width: 1250px;
 	padding: 0 16px;
 	margin: 0 auto;
+
+	&[data-fluid='true']{
+		max-width: unset;
+	}
 }
 
 .text-left {

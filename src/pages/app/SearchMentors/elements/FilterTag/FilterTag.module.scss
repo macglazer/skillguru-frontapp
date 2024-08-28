@@ -1,0 +1,32 @@
+@use '../../../../../scss/variables' as *;
+
+.tag {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: $colour-base-800;
+    fill: $colour-base-800;
+    font-size: 12px;
+    line-height: 21.6px;
+    font-weight: 600;
+    font-family: $font-family-montserrat;
+    background-color: $colour-base-200;
+    border: none;
+    border-radius: 22px;
+    padding: 11px 16px;
+
+    &.clear {
+        background-color: transparent;
+        color: $colour-error-100;
+        cursor: pointer;
+    }
+
+    svg {
+        width: 16px;
+        height: 16px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+}

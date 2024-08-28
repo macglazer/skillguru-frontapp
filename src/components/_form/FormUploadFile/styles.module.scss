@@ -1,0 +1,35 @@
+@use '../../../scss/variables' as *;
+@use '../../../scss/font' as *;
+
+.controllerContentWrapper {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+
+    & > * {
+        flex: 1;
+    }
+}
+
+.previewWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;    
+    flex: none;
+    width: 64px;
+
+    img {
+        height: 64px;
+        width: 64px;
+        border-radius: 50%;
+        display: block;
+    }
+   
+    button {
+        @extend %text-reset-button, %text-caption;
+        color: #E60000;
+        cursor: pointer;
+    }
+}

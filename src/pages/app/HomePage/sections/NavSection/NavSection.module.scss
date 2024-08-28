@@ -1,0 +1,27 @@
+@use '../../../../../scss/variables' as *;
+
+.wrapper {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 16px 18px;
+	grid-column: 1 / -1;
+
+	> * {
+		grid-column: span 4;
+	}
+
+	@media screen and (min-width: $sm) {
+		> * {
+			grid-column: span 2;
+		}
+	}
+
+	@media screen and (min-width: $xl) {
+		grid-template-columns: repeat(4, 1fr);
+		grid-column: 1 / -1;
+
+		> * {
+			grid-column: span 1;
+		}
+	}
+}

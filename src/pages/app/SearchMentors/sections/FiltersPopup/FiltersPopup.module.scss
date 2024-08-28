@@ -1,0 +1,57 @@
+@use "../../../../../scss/variables" as *;
+
+.modal {
+  overflow: hidden;
+  display: block;
+
+  @media (min-width: $xl) {
+    display: none;
+  }
+
+  .modalContent {
+    max-width: 390px !important;
+    overflow: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    h3 {
+      margin-top: 10px;
+    }
+  }
+}
+
+.wrapper {
+  max-width: 390px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.submit {
+  align-items: center;
+  background-color: $primary-color;
+  border-radius: 24px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-family: $font-family-montserrat;
+  font-size: 14px;
+  font-weight: 600;
+  height: 49px;
+  justify-content: center;
+  line-height: 25.2px;
+  padding: 12px 40px;
+  width: 100%;
+
+  &:hover {
+    background-color: rgba($primary-color, 0.9);
+  }
+
+  &:active {
+    background-color: rgba($primary-color, 0.8);
+  }
+}

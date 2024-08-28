@@ -12,7 +12,7 @@
 	box-shadow: -3px 0 10px rgba($dark-color, 0.2);
 
 
-	@media screen and(min-width: map-get($breakpoints, 'lg')) {
+	@media screen and (min-width: map-get($breakpoints, 'lg')) {
 			grid-column: 2/-1;
 	}
 }

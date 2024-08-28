@@ -1,0 +1,5 @@
+export * from './FacebookCircleIcon'
+export * from './InstagramCircleIcon'
+export * from './LinkedInCircleIcon'
+export * from './TwitterCircleIcon'
+export * from './YoutubeCircleIcon'

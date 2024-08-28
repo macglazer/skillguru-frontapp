@@ -1,0 +1,22 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/font" as *;
+
+.stepper {
+    display: flex;
+    gap: 16px;
+
+    &.withPadding {
+        padding: 12px;
+    }
+
+    .step {
+        flex: 1;
+        background-color: rgba($colour-secondary, 15%);
+        height: 8px;
+        border-radius: 50px;
+    }
+
+    .step.active {
+        background-color: $colour-secondary;
+    }
+}

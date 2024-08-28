@@ -1,0 +1,158 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/mixins" as *;
+@use "../../../scss/main.scss" as *;
+@use "../../../scss/font" as *;
+
+.wrapper {
+  margin: auto;
+  padding: 20px;
+}
+
+.faqBox {
+  padding: 24px;
+  border: 1px solid #eaecf0;
+  border-radius: 8px;
+  margin: 36px 0 48px;
+}
+
+.title {
+  @extend %text-heading-3;
+  color: $colour-primary;
+
+  @include media-lg-and-up {
+    font-size: 32px;
+  }
+}
+
+.title + .description {
+  margin-top: 16px;
+}
+
+.description {
+  @extend %text-button-md;
+  color: $colour-base-800;
+}
+
+.description + .cols2 {
+  margin-top: 32px;
+}
+
+.cols2 {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+
+  @include media-lg-and-up {
+    flex-direction: row;
+  }
+
+  > * {
+    flex: 1;
+  }
+}
+
+.cols2Reverse {
+  @include media-lg-and-up {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.faqWrapper {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+
+  .faq {
+    padding: 32px 20px;
+  }
+}
+
+.imgCtaWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .imgCtaBox {
+    max-width: 350px;
+    width: 100%;
+
+    > div {
+      width: 100%;
+    }
+  }
+}
+
+.priceCtaWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 32px 24px;
+  border: 1px solid $colour-base-400;
+  margin: 12px auto 36px;
+  border-radius: 12px;
+
+  .priceCtaBox {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: space-between;
+    align-items: stretch;
+    width: 100%;
+    margin-bottom: 24px;
+
+    @include media-xl-and-up {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+
+    .payoff {
+      @extend %text-button-md;
+      margin-top: 12px;
+      color: $colour-base-800;
+    }
+
+    .buttonWrapper {
+      display: flex;
+      flex-direction: row;
+      gap: 18px;
+      flex-wrap: wrap;
+
+      .paymentBtn {
+        @extend %text-button-md;
+        color: $colour-primary;
+      }
+    }
+  }
+}
+
+.error {
+  @extend %text-button-sm;
+  margin-top: 12px;
+  color: $colour-error-100;
+}
+
+.priceLabel {
+  @extend %text-subtitle-1;
+  color: $colour-primary;
+  display: block;
+}
+
+.priceAmount {
+  color: $colour-secondary;
+  margin-left: 12px;
+}
+
+.scheduleWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding-top: 24px;
+  border-top: 1px solid $colour-base-400;
+}

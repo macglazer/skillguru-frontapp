@@ -1,0 +1,155 @@
+[
+  {
+    "id": 1,
+    "invoiceNo": "#0001",
+    "date": "2023-01-01",
+    "amount": 1500.0,
+    "status": "succeeded",
+    "sessionTitle": "Session 1",
+    "invoiceFileUrl": "https://example.com/invoices/#0001.pdf"
+  },
+  {
+    "id": 2,
+    "invoiceNo": "#0002",
+    "date": "2023-01-02",
+    "amount": 2500.0,
+    "status": "canceled",
+    "sessionTitle": "Session 2",
+    "invoiceFileUrl": "https://example.com/invoices/#0002.pdf"
+  },
+  {
+    "id": 3,
+    "invoiceNo": "#0003",
+    "date": "2023-01-03",
+    "amount": 3000.0,
+    "status": "succeeded",
+    "sessionTitle": "Session 3",
+    "invoiceFileUrl": "https://example.com/invoices/#0003.pdf"
+  },
+  {
+    "id": 4,
+    "invoiceNo": "#0004",
+    "date": "2023-01-04",
+    "amount": 1200.0,
+    "status": "requires_capture",
+    "sessionTitle": "Session 4",
+    "invoiceFileUrl": "https://example.com/invoices/#0004.pdf"
+  },
+  {
+    "id": 5,
+    "invoiceNo": "#0005",
+    "date": "2023-01-05",
+    "amount": 3200.0,
+    "status": "succeeded",
+    "sessionTitle": "Session 5",
+    "invoiceFileUrl": "https://example.com/invoices/#0005.pdf"
+  },
+  {
+    "id": 6,
+    "invoiceNo": "#0006",
+    "date": "2023-01-06",
+    "amount": 1100.0,
+    "status": "canceled",
+    "sessionTitle": "Session 6",
+    "invoiceFileUrl": "https://example.com/invoices/#0006.pdf"
+  },
+  {
+    "id": 7,
+    "invoiceNo": "#0007",
+    "date": "2023-01-07",
+    "amount": 1800.0,
+    "status": "requires_capture",
+    "sessionTitle": "Session 7",
+    "invoiceFileUrl": "https://example.com/invoices/#0007.pdf"
+  },
+  {
+    "id": 8,
+    "invoiceNo": "#0008",
+    "date": "2023-01-08",
+    "amount": 2700.0,
+    "status": "succeeded",
+    "sessionTitle": "Session 8",
+    "invoiceFileUrl": "https://example.com/invoices/#0008.pdf"
+  },
+  {
+    "id": 9,
+    "invoiceNo": "#0009",
+    "date": "2023-01-09",
+    "amount": 2200.0,
+    "status": "canceled",
+    "sessionTitle": "Session 9",
+    "invoiceFileUrl": "https://example.com/invoices/#0009.pdf"
+  },
+  {
+    "id": 10,
+    "invoiceNo": "#0010",
+    "date": "2023-01-10",
+    "amount": 2100.0,
+    "status": "succeeded",
+    "sessionTitle": "Session 10",
+    "invoiceFileUrl": "https://example.com/invoices/#0010.pdf"
+  },
+  {
+    "id": 11,
+    "invoiceNo": "#0011",
+    "date": "2023-01-11",
+    "amount": 2600.0,
+    "status": "processing",
+    "sessionTitle": "Session 11",
+    "invoiceFileUrl": "https://example.com/invoices/#0011.pdf"
+  },
+  {
+    "id": 12,
+    "invoiceNo": "#0012",
+    "date": "2023-01-12",
+    "amount": 1900.0,
+    "status": "succeeded",
+    "sessionTitle": "Session 12",
+    "invoiceFileUrl": "https://example.com/invoices/#0012.pdf"
+  },
+  {
+    "id": 13,
+    "invoiceNo": "#0013",
+    "date": "2023-01-13",
+    "amount": 1300.0,
+    "status": "requires_payment_method",
+    "sessionTitle": "Session 13",
+    "invoiceFileUrl": "https://example.com/invoices/#0013.pdf"
+  },
+  {
+    "id": 14,
+    "invoiceNo": "#0014",
+    "date": "2023-01-14",
+    "amount": 1400.0,
+    "status": "succeeded",
+    "sessionTitle": "Session 14",
+    "invoiceFileUrl": "https://example.com/invoices/#0014.pdf"
+  },
+  {
+    "id": 15,
+    "invoiceNo": "#0015",
+    "date": "2023-01-15",
+    "amount": 2300.0,
+    "status": "processing",
+    "sessionTitle": "Session 15",
+    "invoiceFileUrl": "https://example.com/invoices/#0015.pdf"
+  },
+  {
+    "id": 16,
+    "invoiceNo": "#0016",
+    "date": "2023-01-16",
+    "amount": 2400.0,
+    "status": "requires_action",
+    "sessionTitle": "Session 16",
+    "invoiceFileUrl": "https://example.com/invoices/#0016.pdf"
+  },
+  {
+    "id": 17,
+    "invoiceNo": "#0017",
+    "date": "2023-01-17",
+    "amount": 2800.0,
+    "status": "succeeded",
+    "sessionTitle": "Session 17",
+    "invoiceFileUrl": "https://example.com/invoices/#0016.pdf"
+  }
+]

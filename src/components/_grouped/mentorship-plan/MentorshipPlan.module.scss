@@ -1,0 +1,245 @@
+@use "@styles/variables" as *;
+@use "@styles/font" as *;
+
+.wrapper {
+    padding: 24px 20px;
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 16px;
+    border: 1px solid $colour-base-400;
+    box-sizing: border-box;
+    
+    &.selected {
+        border-color: $colour-secondary;
+        border-width: 2px;
+        padding: 23px 19px;
+    }
+}
+
+.headline {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%; 
+    position: relative;
+
+    .menuOverflow {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        .menuOverflowList {
+            top: 26px;
+        }
+
+        .menuOverflowToggle {
+            width: 26px;
+            height: 26px;
+
+            &:hover {
+                background-color: transparent;
+            }
+        }
+    }
+
+    &.planNameWithMenu {
+        padding-right: 48px;
+    }    
+
+    .planName {
+        flex: 1;
+    }
+}
+
+.rows {
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+
+    input {
+        width: auto;
+    }
+
+    textarea,
+    input {
+        outline: none;
+        border-radius: 8px;
+        border: 1px solid $colour-base-400;
+        padding: 8px;
+        resize: vertical;
+        scrollbar-width: 0;
+        overflow: hidden;
+        -ms-overflow-style: none;
+        scrollbar-color: transparent transparent;
+        height: auto;
+
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+          }
+    }
+}
+
+.row {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+
+    .rowMiddle {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+    }
+
+    input {
+        width: 35px;
+        box-sizing: border-box;
+    }
+
+    .overflowList {
+        border: 1px solid $colour-base-200;
+    }
+
+    .overflowOption {
+        border: 1px solid $colour-base-200;
+        color: $colour-error-100;
+    }
+
+    .toggle {
+        width: 24px;
+        height: 24px;
+        font-weight: 800;
+        border: 1px solid $colour-base-400;
+
+        &:hover {
+            background-color: $colour-base-200;
+        }
+
+        &:active {
+            background-color: $colour-base-400;
+        }
+
+        svg {
+            font-size: 12px !important;
+            color: $colour-base-800;
+        }
+    }
+}
+
+.select {
+    @extend %text-caption;
+    color: $colour-base-800;
+    cursor: pointer;
+
+    :global(.xyz__indicator-separator) {
+        background-color: $colour-base-400;
+    }
+
+    > div {
+        border: 1px solid $colour-base-400;
+    }
+}
+
+.text { 
+    @extend %text-caption;
+    color: $colour-base-800;
+}
+
+.row > .text {
+    flex: 1;
+}
+
+.checkIcon {
+    font-size: 18px;
+    color: $colour-primary;
+}
+
+.priceRow {
+    width: 100%;
+    gap: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .priceInput {
+        @extend %text-heading-3;
+        color: $colour-primary;
+        width: 85px;
+        box-sizing: border-box;
+        text-align: center;
+        padding: 4px 16px;
+        appearance: textfield;
+        -moz-appearance: textfield;
+
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+        }
+    }
+
+    span {
+        @extend %text-button-md;
+        color: $colour-base-800;
+    }
+
+    .textCurrency {
+        @extend %text-heading-3;
+        color: $colour-primary;
+    }
+}
+
+.description {
+    @extend %text-caption;
+    color: $colour-base-800;
+    width: 100%;
+    min-height: 64px;
+    box-sizing: border-box;
+    padding: 8px;
+
+    &::placeholder {
+        color: $colour-base-600;
+    }
+}
+
+.subtitle {
+    @extend %text-button-md;
+    color: $colour-primary;
+    margin: 0;
+}
+
+.btnAdd {
+    @extend %text-button-sm;
+    color: $colour-secondary;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        color: lighten($colour-secondary, 10%);
+    }
+
+    &:active {
+        color: lighten($colour-secondary, 20%);
+    }
+
+    svg {
+        font-size: 18px;
+    }
+}

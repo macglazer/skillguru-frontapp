@@ -1,0 +1,32 @@
+@use '../../../scss/variables' as *;
+
+.wrapper {
+	padding: 18px 20px 20px;
+	border-radius: 8px;
+	border: 1.5px solid #dddfe1;
+	margin-top: 20px;
+}
+
+.title {
+	display: flex;
+	justify-content: space-between;
+	font-size: 14px!important;
+
+	small {
+		font-size: 12px;
+		font-weight: 400;
+		line-height: 15px;
+	}
+}
+
+.description {
+	margin: 18px 0;
+	font-size: 12px;
+}
+
+.button {
+	font-size: 12px;
+	font-weight: 600;
+	line-height: 24px;
+	padding: 4.5px 21px;
+}

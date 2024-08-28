@@ -1,0 +1,57 @@
+@use '../variables' as *;
+
+.checkbox {
+	cursor: pointer;
+  
+	&__label {
+		display: flex;
+		position: relative;
+		gap: 10px;
+		font-size: 16px;
+		color: #737373;
+
+		&:before {
+			content: '';
+			display: block;
+			width: 18px;
+			min-width: 18px;
+			height: 18px;
+			border: 2px solid $new-gray-color;
+			border-radius: 4px;
+		}
+
+		&:after {
+			position: absolute;
+			content: '\2713';
+			top: 50%;
+			left: 6px;
+			font-size: 10px;
+			color: #fff;
+			transform: translateY(-50%);
+		}
+	}
+
+	&__field {
+		display: none;
+		width: 0;
+		height: 0;
+		opacity: 0;
+		visibility: hidden;
+
+		&:checked {
+			+ .checkbox__label {
+				&::before {
+					background-color: $primary-color;
+				}
+			}
+		}
+	}
+
+	&[data-is-error='true']{
+		.checkbox__label{
+			&:before {
+				border: 2px solid $danger-color;
+			}
+		}
+	}
+}

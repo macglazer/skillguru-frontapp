@@ -1,0 +1,14 @@
+@use '../../../../../scss/variables' as *;
+
+.wrapper {
+    display: none;
+    min-width: 170px;
+    max-width: 205px;
+    flex: 1;
+
+    @media (min-width: $xl) {
+        display: flex; 
+        flex-direction: column;
+        gap: 32px;
+    }
+}

@@ -1,0 +1,14 @@
+[
+    { "id": 1, "lastMessageDate": "2014-01-02", "unreadMessages": 1, "fullName": "John Doe", "lastMessage": "Hello!", "avatarUrl": "" },
+    { "id": 2, "lastMessageDate": "", "unreadMessages": 1, "fullName": "Jane Smith", "lastMessage": "Hi there!", "avatarUrl": "" },
+    { "id": 4, "lastMessageDate": "", "unreadMessages": 1, "fullName": "Bob Brown", "lastMessage": "Good morning!", "avatarUrl": "" },
+    { "id": 5, "lastMessageDate": "", "unreadMessages": 1, "fullName": "John2 Doe", "lastMessage": "Hello!", "avatarUrl": "" },
+    { "id": 6, "lastMessageDate": "", "unreadMessages": 1, "fullName": "Jane2 Smith", "lastMessage": "Hi there!", "avatarUrl": "" },
+    { "id": 7, "lastMessageDate": "", "unreadMessages": 1, "fullName": "Bob2 Brown", "lastMessage": "Good morning!", "avatarUrl": "" },
+    { "id": 8, "lastMessageDate": "", "unreadMessages": 1, "fullName": "John3 Doe", "lastMessage": "Hello!", "avatarUrl": "" },
+    { "id": 9, "lastMessageDate": "", "unreadMessages": 1, "fullName": "Jane3 Smith", "lastMessage": "Hi there!", "avatarUrl": "" },
+    { "id": 10, "lastMessageDate": "", "unreadMessages": 1, "fullName": "Bob3 Brown", "lastMessage": "Good morning!", "avatarUrl": "" },
+    { "id": 11, "lastMessageDate": "", "unreadMessages": 1, "fullName": "John4 Doe", "lastMessage": "Hello!", "avatarUrl": "" },
+    { "id": 12, "lastMessageDate": "", "unreadMessages": 1, "fullName": "Jane4 Smith", "lastMessage": "Hi there!", "avatarUrl": "" },
+    { "id": 13, "lastMessageDate": "", "unreadMessages": 1, "fullName": "Bob4 Brown", "lastMessage": "Good morning!", "avatarUrl": "" }
+]

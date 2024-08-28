@@ -1,0 +1,32 @@
+@use "@styles/variables" as *;
+@use "@styles/mixins" as *;
+@use "@styles/font" as *;
+
+.container {
+  position: relative;
+  padding-bottom: 32px;
+}
+
+.textarea {
+  @extend %text-body-2;
+  padding: 14px;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid $new-gray-color;
+  outline: none;
+  color: $colour-base-600;
+  resize: none;
+}
+
+.label {
+  @extend %text-button-md;
+  display: block;
+  margin-bottom: 12px;
+  color: $colour-primary;
+}
+
+.error {
+  @extend %text-button-sm;
+  position: absolute;
+  color: $colour-error-100;
+}

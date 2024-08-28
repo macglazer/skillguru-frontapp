@@ -1,0 +1,81 @@
+@use 'src/scss/variables' as *;
+
+.wrapper {
+	:global {
+		.container {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			padding-top: 32px;
+			min-height: max-content;
+			height: calc(100vh - 100px);
+			gap: 16px;
+			text-align: center;
+		}
+	}
+
+	&NoTitle {
+		:global {
+			.container {
+				height: auto;
+			}
+		}
+	}
+
+	.header {
+		width: 100%;
+		margin-bottom: 80px;
+		font-size: 28px;
+		text-align: left;
+		color: $colour-primary;
+	}
+
+	.text {
+		margin-top: 42px;
+		font-weight: 600;
+		color: #56658F;
+	}
+
+	> svg {
+		display: block;
+		width: 65%;
+		height: auto;
+		max-width: 315px;
+	}
+
+	@media screen and (min-width: $md) {
+		:global {
+			.container {
+				justify-content: center;
+				gap: 40px;
+			}
+		}
+
+		.header {
+			text-align: center;
+			margin-bottom: 0;
+		}
+
+		.text {
+			margin-top: 0;
+		}
+	}
+}
+
+.button {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	max-width: max-content;
+	font-weight: 600;
+
+	svg path {
+		transition: stroke 0.24s;
+	}
+
+	&:hover {
+		svg path {
+			stroke: $light-color;
+		}
+	}
+}

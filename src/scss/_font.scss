@@ -1,0 +1,101 @@
+@use './mixins' as *;
+@use './variables' as *;
+
+/* Common styles */ 
+%text-common {
+    font-family: $font-family-montserrat;
+}
+
+%text-reset-button {
+    text-decoration: none;
+    color: inherit;
+    background-color: transparent;
+    border: none;
+}
+
+%text-heading-1 {
+    @extend %text-common;
+    font-size: 48px; //pxToRem(48);
+    font-weight: $font-weight-bold;
+    line-height: 150%; 
+    letter-spacing: -2px;
+}
+
+%text-heading-2 {
+    @extend %text-common;
+    font-size: 32px; //pxToRem(32);
+    font-weight: $font-weight-bold;
+    line-height: 150%; 
+    letter-spacing: -1px;
+}
+
+%text-heading-3 {
+    @extend %text-common;
+    font-size: 28px; //pxToRem(28);
+    font-weight: $font-weight-bold;
+    line-height: 150%; 
+    letter-spacing: -1px;
+}
+
+%text-subtitle-1 {
+    @extend %text-common;
+    font-size: 20px; //pxToRem(20);
+    font-weight: $font-weight-bold;
+    line-height: 130%; 
+}
+
+%text-subtitle-2 {
+    @extend %text-common;
+    font-size: 20px; //pxToRem(20);
+    font-weight: $font-weight-semibold;
+    line-height: 130%; 
+}
+
+%text-nav {
+    @extend %text-common;
+    font-size: 18px; //pxToRem(18);
+    font-weight: $font-weight-semibold;
+    line-height: 130%; 
+}
+
+%text-body-1 {
+    @extend %text-common;
+    font-size: 16px; //pxToRem(16);
+    font-weight: $font-weight-regular;
+    line-height: 180%; 
+}
+
+%text-body-2 {
+    @extend %text-common;
+    font-size: 14px; //pxToRem(14);
+    font-weight: $font-weight-medium;
+    line-height: 180%; 
+}
+
+%text-caption {
+    @extend %text-common;
+    font-size: 12px; //pxToRem(12);
+    font-weight: $font-weight-medium;
+    line-height: 180%; 
+}
+
+%text-button-lg {
+    @extend %text-common;
+    font-size: 16px; //pxToRem(16);
+    font-weight: $font-weight-semibold;
+    line-height: 180%; 
+}
+
+%text-button-md {
+    @extend %text-common;
+    font-size: 14px; //pxToRem(14);
+    font-weight: $font-weight-semibold;
+    line-height: 180%; 
+}
+
+%text-button-sm {
+    @extend %text-common;
+    font-size: 12px; //pxToRem(12);
+    font-weight: $font-weight-semibold;
+    line-height: 180%; 
+}

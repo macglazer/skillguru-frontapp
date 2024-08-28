@@ -1,0 +1,52 @@
+@use '../../../scss/variables' as *;
+
+.wrapper {
+	display: flex;
+	gap: 16px;
+	padding: 16px 23px 16px 15px;
+	border-radius: 10px;
+	background-color: #eff4f9;
+}
+
+.image {
+	position: relative;
+	min-width: 72px;
+	width: 72px;
+	height: 72px;
+	overflow: hidden;
+	border-radius: 50%;
+
+	img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+	color: $dark-color;
+	font-size: 14px;
+	font-weight: 600;
+	margin-top: 3px;
+}
+
+.link {
+  max-width: max-content;
+	font-size: 13px;
+	font-weight: 500;
+	margin-bottom: 3px;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

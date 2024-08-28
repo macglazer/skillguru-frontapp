@@ -1,0 +1,80 @@
+@use '@styles/variables' as *;
+
+.wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	padding: 12px;
+
+	button {
+		border-radius: 8px;
+		background-color: transparent;
+		cursor: pointer;
+	}
+
+	.sideButton {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 10px;
+		border: 1px solid $new-gray-color;
+		padding: 8px 14px;
+
+		&:disabled {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		&:first-of-type{
+			svg{
+				transform: rotate(180deg);
+			}
+		}
+
+		span {
+			display: none;
+
+			@media screen and (min-width: $sm) {
+				display: block;
+				font-size: 14px;
+				font-weight: 500;
+				line-height: 25.2px;
+				color: #56658F;
+			}
+		}
+	}
+
+	.pageButton {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		padding: 0;
+		color: #56658f;
+
+		&:disabled {
+			background-color: $new-gray-color;
+			color: $dark-color;
+		}
+	}
+}
+
+.mobilePages {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 25.2px;
+
+	@media screen and (min-width: $sm) {
+		display: none;
+	}
+}
+
+.desktopPages {
+	display: none;
+
+	@media screen and (min-width: $sm) {
+		display: flex;
+	}
+}

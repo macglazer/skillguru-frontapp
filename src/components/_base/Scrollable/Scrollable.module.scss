@@ -1,0 +1,40 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/font" as *;
+
+.wrapper {
+  max-width: 100%;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $colour-primary;
+    border-radius: 6px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $colour-base-400;
+    -webkit-border-radius: 10px;
+  }
+
+  ::-moz-scrollbar-button,
+  &::-moz-scrollbar-button,
+  ::-webkit-scrollbar-button,
+  &::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  scrollbar-width: thin;
+  scrollbar-color: $colour-primary $colour-base-400;
+  //   scrollbar-width: none;
+}
+
+.inner {
+}

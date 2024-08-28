@@ -1,0 +1,77 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/font" as *;
+
+.status {
+    @extend %text-button-sm;
+    align-items: center;
+    border-radius: 16px;
+    display: inline-flex;
+    height: 22px;
+    justify-content: center;
+    padding: 2px 8px 2px 20px;
+    position: relative;
+
+    &::before {
+        border-radius: 50%;
+        content: "";
+        display: block;
+        height: 6px;
+        left: 7px;
+        position: absolute;
+        width: 6px;
+        z-index: 2;
+    }
+
+    &.noWrap {
+        max-width: 100%;
+
+        span {
+            max-width: 100%;
+            text-wrap: nowrap;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    &.fullWidth {
+        width: 100%;
+        display: flex;
+    }
+
+    &.active {
+        background-color: $colour-success-200;
+        color: $colour-success-100;
+
+        &::before {
+            background-color: $colour-success-100;
+        }
+    }
+
+    &.inactive {
+        background-color: $colour-error-200;
+        color: $colour-error-100;
+
+        &::before {
+            background-color: $colour-error-100;
+        }
+    }
+
+    &.warning {
+        background-color: $colour-warning-200;
+        color: $colour-warning-100;
+
+        &::before {
+            background-color: $colour-warning-100;
+        }
+    }
+
+    &.info {
+        background-color: $colour-warning-200;
+        color: $colour-warning-100;
+
+        &::before {
+            background-color: $colour-warning-100;
+        }
+    }
+}

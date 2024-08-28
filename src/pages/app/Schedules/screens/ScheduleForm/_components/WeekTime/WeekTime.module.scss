@@ -1,0 +1,74 @@
+@use '../../../../../../../scss/variables' as *;
+
+.wrapper {
+	display: grid;
+	grid-template-columns: 80px 1fr;
+	gap: 16px 46px;
+
+	.time {
+		grid-column: 1/-1;
+		grid-row: 2/3;
+		width: 100%;
+
+		&Wrapper {
+			display: grid;
+			gap: 10px;
+			margin-bottom: 10px;
+			grid-template-columns: 30px 1fr 1fr 30px;
+		}
+
+		@media screen and (min-width: $sm) and (max-width: $md) {
+			grid-column: 2/3;
+			grid-row: 1/2;
+		}
+    
+		@media screen and (min-width: $lg) {
+			grid-column: 2/3;
+			grid-row: 1/2;
+		}
+	}
+}
+
+.checkbox {
+	grid-column: 1/2;
+	grid-row: 1/2;
+}
+
+.inputFrom {
+	grid-column: 2/3;
+}
+
+.inputTo {
+	grid-column: 3/4;
+}
+
+.inputFrom,
+.inputTo {
+	border-radius: 6px;
+	border: 1px solid #f8f8fb;
+	background: #fff;
+	font-size: 16px;
+	padding: 15px;
+}
+
+.error {
+	margin-top: 10px;
+	text-align: center;
+	font-size: 16px;
+	color: $danger-color;
+}
+
+.actionButton {
+	background-color: transparent;
+	cursor: pointer;
+	padding: 5px;
+
+	&:disabled{
+		opacity: .5;
+	}
+}
+
+.customTimePickerInput {
+	text-align: end;
+	padding: 13px 0 !important;
+}

@@ -1,0 +1,65 @@
+//@use '../../scss/variables' as *;
+//
+//.header {
+//	background-color: $secondary-color;
+//
+//	:global {
+//		.container {
+//			max-width: calc($xl + 200px);
+//		}
+//	}
+//
+//	&Top {
+//		padding: 29px 0;
+//	}
+//
+//	&Bottom {
+//		padding: 17px 16px 20px;
+//		margin-left: -16px;
+//		margin-right: -16px;
+//		background-color: $gray-color;
+//	}
+//
+//	&Button {
+//		display: flex;
+//		align-items: center;
+//		gap: 12px;
+//		background-color: transparent;
+//		font-size: 14px;
+//		font-weight: 600;
+//		line-height: 17px;
+//		color: $dark-color;
+//		cursor: pointer;
+//
+//		&:before {
+//			content: '';
+//			display: block;
+//			width: 10px;
+//			height: 10px;
+//			border-left: 2px solid $dark-color;
+//			border-bottom: 2px solid $dark-color;
+//			transform: rotate(45deg);
+//		}
+//	}
+//
+//	@media screen and (min-width: $lg) {
+//		&Bottom {
+//			background-color: transparent;
+//		}
+//
+//		&Button {
+//			color: $light-color;
+//
+//			&:before {
+//				border-left: 2px solid $light-color;
+//				border-bottom: 2px solid $light-color;
+//			}
+//		}
+//	}
+//}
+//
+//.main {
+//	background-color: $gray-color;
+//	padding-bottom: 32px;
+//	min-height: calc(100vh - 146px);
+//}

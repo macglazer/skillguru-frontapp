@@ -1,0 +1,127 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/font" as *;
+
+.content {
+	display: grid;
+	grid-template-columns: calc(100% - 283px) minmax(auto, 257px);
+	gap: 20px 26px;
+}
+
+.button {
+	font-size: 10px;
+	font-weight: 600;
+	line-height: 16px;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+@media screen and (min-width: $xl) {
+	.content {
+		transform: translateY(-70px);
+		margin-left: 70px;
+	}
+}
+
+.title {
+	@extend %text-subtitle-2;
+	color: $colour-primary;
+	margin: 0 0 32px;
+}
+
+.wrapper {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	gap: 16px;
+
+	> aside {
+		flex: 300;
+		order: 1;
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+		background-color: $colour-base-200;
+		padding: 24px 20px 32px;
+		margin: 0 16px;
+	}
+
+	> .main {
+		flex: 725;
+		order: 2;
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		padding: 16px 16px 64px;
+		overflow: hidden;
+		width: 100%;
+
+		> section {
+			display: flex;
+			flex-direction: column;
+			gap: 48px;
+		}
+	}
+
+	.mainFullWidth {
+		max-width: 780px;
+		margin: auto;
+		align-items: center;
+		justify-content: center;
+
+		> section {
+			width: 100%;
+		}
+	}
+
+	.sectionPayment {
+		display: block;
+	}
+
+	@media screen and (min-width: $xl) {
+		flex-direction: row;
+		gap: 29px;
+		padding: 43px 16px 72px;
+
+		> aside {
+			order: 2;
+			padding: 0;
+			background-color: transparent;
+			margin: 0;
+		}
+
+		> .main {
+			order: 1;
+			padding: 0;
+		}
+	}
+
+	.formWrapper {
+		@extend %box-border;
+		padding: 32px 24px;
+	}
+}
+
+.backLink {
+	display: flex !important;
+	justify-content: space-between;
+	align-items: center;
+	gap: 8px;
+	margin: 24px 16px;
+	padding: 8px 14px;
+	width: fit-content;
+	background-color: $colour-base-000;
+	color: $colour-base-800;
+	border-radius: 8px;
+	border: 1px solid $colour-base-400;
+	text-decoration: none;
+	cursor: pointer;
+	& > span {
+	  @extend %text-body-2;
+	}
+    
+	svg {
+	  transform: rotate(180deg);
+	}
+    }
+    

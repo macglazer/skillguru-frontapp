@@ -1,0 +1,77 @@
+@use '@styles/variables' as *;
+@use '@styles/mixins' as *;
+@use '@styles/font' as *;
+
+.input {
+	&Label {
+		&Text {
+			display: block;
+			color: $dark-color;
+			font-size: 16px;
+			font-weight: 600;
+			line-height: 150%;
+			margin-bottom: 19px;
+		}
+	}
+
+	&Field {
+		@include roboto;
+		width: 100%;
+		border-radius: 6px;
+		border: 1px solid $new-gray-color;
+		background: #fff;
+		padding: 15px 23px;
+		color: $dark-color;
+		font-size: 16px;
+		font-weight: 400;
+		outline: transparent;
+		resize: none;
+	}
+
+	&Error {
+		display: block;
+		color: $danger-color;
+		font-weight: 400;
+		min-height: 16px;
+		font-size: 16px;
+		margin-top: 15px;
+		line-height: 1em;
+		opacity: 0;
+		transition: opacity 0.24s;
+	}
+
+	&[data-status='error'] {
+		.inputField {
+			border: 2px solid $danger-color;
+		}
+
+		.inputError {
+			opacity: 1;
+		}
+	}
+
+	&[data-status='success'] {
+		.inputField {
+			border: 2px solid $success-color;
+		}
+	}
+}
+
+.textMaxLength {
+	@extend %text-caption;
+	color: $colour-base-600;
+	display: block;
+	margin-top: 12px;
+}
+
+textarea.inputField {
+	min-height: clamp(180px, 20vw, 274px);
+}
+
+.chips {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	max-width: 100%;
+	margin-top: 8px;
+}

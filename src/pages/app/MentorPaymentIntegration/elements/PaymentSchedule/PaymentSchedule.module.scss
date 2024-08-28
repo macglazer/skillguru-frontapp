@@ -1,0 +1,88 @@
+@use "src/scss/variables" as *;
+@use "src/scss/mixins" as *;
+@use "src/scss/font" as *;
+
+.scheduleLabel {
+  @extend %text-button-lg;
+  margin-bottom: 8px;
+  color: $colour-primary;
+}
+
+.dropdownWrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+
+  .btnSave {
+    font-weight: 500;
+  }
+}
+
+.dropdown {
+  position: relative;
+  flex-grow: 2;
+  width: 400px;
+  max-width: 100%;
+
+  .pending {
+    position: absolute;
+    border-radius: 12px;
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+    top: 1px;
+    background-color: rgba($colour-base-200, 0.6);
+  }
+}
+
+.btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  width: 100%;
+  color: $colour-base-600;
+  border: 1px solid $colour-base-400;
+  background-color: $colour-base-000;
+}
+
+.toogle {
+  border-radius: 12px;
+  max-width: 100%;
+
+  p {
+    width: calc(100% - 20px);
+    text-align: left;
+  }
+}
+
+.menu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.option {
+  border-top: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $colour-base-200;
+  }
+  &:first-child {
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  &:last-child {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+  }
+}
+
+.error {
+  @extend %text-button-sm;
+  margin-top: 12px;
+  color: $colour-error-100;
+}

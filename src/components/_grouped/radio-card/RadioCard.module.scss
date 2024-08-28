@@ -1,0 +1,48 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/main" as *;
+@use "../../../scss/_mixins" as *;
+
+.radioCard {
+    padding: 24px;
+    border-radius: 16px;
+    border: 1px solid $colour-base-400;
+    position: relative;
+}
+
+.radioCardSelected {
+    border: 1px solid $colour-secondary;
+}
+
+.hiddenInput {
+    display: none;
+}
+
+.radioHeader {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+}
+
+.fakeInput {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid $colour-primary;
+}
+
+.radioCardSelected .fakeInput {
+    border: 1px solid $colour-secondary;
+
+    &::after {
+        display: block;
+        content: '';
+        background-color: $colour-secondary;
+        width: 10px;
+        height: 10px;
+    }
+}
+
+.title {}
+
+.radioContent {}

@@ -1,0 +1,67 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/mixins" as *;
+@use "../../../scss/main" as *;
+@use "../../../scss/font" as *;
+
+.Actions {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: flex-end;
+    padding: 32px 24px;
+
+    @include media-lg-and-up {
+        padding: 16px 24px;
+    }
+}
+
+.Content {
+    padding-bottom: 24px;
+
+    @include media-lg-and-up {
+        padding: 24px;
+    }
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 24px;
+
+    @include media-lg-and-up {
+        flex-direction: row;
+        gap: 32px;
+    }
+
+    .colTitle {
+        @include media-lg-and-up {
+            width: 200px;
+        }
+
+        @include media-xl-and-up {
+            width: 240px;
+        }
+
+        @include media-xxl-and-up {
+            width: 280px;
+        }
+    }
+
+    .colContent {
+        flex: 1;
+    }
+}
+
+.colContent {
+    border-radius: 8px;
+
+    @include media-lg-and-up {
+        border: 1px solid $colour-base-400;
+    }
+
+    .Content + .Actions {
+        border-top: 1px solid $colour-base-400;
+    }
+}

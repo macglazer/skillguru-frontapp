@@ -1,0 +1,36 @@
+@use '../../variables' as *;
+
+.session-modal {
+	&__title {
+		font-size: 24px;
+		margin-bottom: 1.5em;
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+    gap: 40px 20px;
+    max-height: 950px;
+    overflow-x: hidden;
+		overflow-y: scroll;
+		-ms-overflow-style: none;
+		scrollbar-width: none;
+		overflow-y: scroll;
+    
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		> * {
+			grid-column: 1/-1;
+		}
+	}
+
+  @media screen and (min-width: map-get($breakpoints, 'md')) {
+    &__list {
+      > * {
+        grid-column: span 1;
+      }
+    }
+  }
+}

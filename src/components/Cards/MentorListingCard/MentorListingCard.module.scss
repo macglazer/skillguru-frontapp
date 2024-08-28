@@ -1,0 +1,264 @@
+@use "../../../scss/variables" as *;
+
+.wrapper {
+	background-color: $light-color;
+	border-radius: 15px;
+	border: 1px solid $colour-base-400;
+	color: inherit;
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-items: center;
+	padding: 16px 20px;
+	position: relative;
+	text-decoration: none;
+
+	@media (min-width: $md) {
+		padding: 24px;
+	}
+
+	.header {
+		width: 100%;
+	}
+
+	.user {
+		display: flex;
+		gap: 12px;
+		align-items: center;
+		justify-content: flex-start;
+
+		.avatar {
+			border-radius: 50%;
+			display: block;
+			height: 54px;
+			object-fit: cover;
+			overflow: hidden;
+			width: 54px;
+		}
+
+		.name {
+			color:$colour-primary
+		}
+	}
+
+	.name,
+	.price,
+	.profession,
+	.special,
+	.tag,
+	.title {
+		font-family: $font-family-montserrat;
+		margin: 0;
+	}
+
+	.special {
+		color: $secondary-color;
+		font-size: 12px;
+		font-weight: 600;
+		line-height: 21.6px;
+		display: none;
+		padding: 4px 16px;
+		background-color: #f7fdf8;
+		border-radius: 24px;
+
+		&__success {
+			color: $success-color;
+		}
+
+		&__error {
+			color: $danger-color;
+		}
+
+		&__warning {
+			color: $primary-color;
+		}
+
+		@media (min-width: $lg) {
+			display: block;
+		}
+	}
+
+	.name {
+		font-size: map-get($font-size, xs);
+		font-weight: 600;
+	}
+
+	.profession {
+		color: #8e9abb;
+		font-size: 12px;
+		font-weight: 500;
+		line-height: 21.6px;
+	}
+
+	.description {
+		color: #8e9abb;
+		font-size: 12px;
+		font-weight: 500;
+		line-height: 21.6px;
+
+		@media (min-width: $md) {
+			font-size: 14px;
+			line-height: 25.2px;
+		}
+	}
+
+	.title {
+		color: $secondary-color;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 28.8px;
+
+		@media (min-width: $md) {
+			font-size: 20px;
+			line-height: 26px;
+		}
+	}
+
+	.price {
+		color: $secondary-color;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 26px;
+	}
+
+	.userNameRow {
+		display: flex;
+		gap: 16px;
+		align-items: center;
+		justify-content: flex-start;
+	}
+
+	.reviewsLg,
+	.reviews {
+		display: flex;
+		gap: 12px;
+
+		span {
+			color: $secondary-color;
+			font-size: 12px;
+			font-weight: 500;
+			line-height: 21.6px;
+		}
+
+		.stars {
+			display: flex;
+			gap: 4px;
+		}
+	}
+
+	.reviews {
+		display: flex;
+
+		@media (min-width: $lg) {
+			display: none;
+		}
+	}
+
+	.reviewsLg {
+		display: none;
+		flex: 1;
+		align-items: center;
+		justify-content: flex-end;
+		flex-wrap: wrap;
+
+		@media (min-width: $lg) {
+			display: flex;
+		}
+	}
+
+	.tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 16px;
+
+		.tag {
+			color: $colour-base-800;
+			background-color: $colour-base-200;
+			font-family: $font-family-montserrat;
+			font-size: map-get($font-size, xxs);
+			font-weight: 600;
+			line-height: 21.6px;
+			text-align: left;
+			border-radius: 24px;
+			padding: 8px 16px;
+			display: block;
+
+			&.clickable:hover {
+				background-color: $primary-color;
+				cursor: pointer;
+			}
+		}
+	}
+
+	.body {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		margin: 16px 0 24px;
+		width: 100%;
+
+		@media (min-width: $md) {
+			margin: 24px 0 24px;
+			gap: 16px;
+		}
+	}
+
+	.footer {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+
+		.price {
+			align-self: flex-end;
+		}
+
+		@media (min-width: $md) {
+			align-items: center;
+
+			.price {
+				align-self: unset;
+			}
+		}
+	}
+
+	.moreBtn {
+		background-color: transparent;
+		border: none;
+		color: $primary-color;
+		cursor: pointer;
+		display: block;
+		font-family: $font-family-montserrat;
+		font-size: 12px;
+		font-weight: 600;
+		line-height: 21.6px;
+		margin-top: 8px;
+		text-align: left;
+	}
+
+	.descriptionWrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.animateDescriptionContent {
+		position: relative;
+		transition: 0.5s;
+
+		&::after {
+			position: absolute;
+			background-image: linear-gradient(to top, rgb(255, 255, 255) calc(100% - 30px), rgba(255, 255, 255, 0));
+			bottom: 0;
+			right: 0;
+			width: 100%;
+			height: calc(100% - 20px);
+			content: "";
+			transition: 0.5s;
+			opacity: 1;
+		}
+
+		&.animateDescriptionContentExpanded::after {
+			opacity: 0;
+			transition: 0.5s;
+			// background-image: linear-gradient(to top, rgb(255, 255, 255, 0) calc(100% - 30px), rgba(255, 255, 255, 0));
+		}
+	}
+}

@@ -1,0 +1,59 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/main" as *;
+@use "../../../scss/_mixins" as *;
+
+.wrapper {
+    position: relative;
+}
+
+.option {
+    padding: 16px;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .text {
+        flex: 1;
+        text-align: left;
+    }
+
+    &:hover {
+        background-color: $colour-base-400;
+    }
+}
+
+.toggle {
+    padding: 16px 0;
+    background-color: transparent;
+}
+
+.btn {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.img {
+    display: block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    border: 1px solid $colour-base-400;
+}
+
+.text {
+    @extend %text-caption;
+    color: $colour-base-800;
+}
+
+.menu {
+    position: absolute;
+    top: 100%;
+    z-index: 2;
+    right: 0;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+}

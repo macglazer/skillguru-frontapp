@@ -1,0 +1,40 @@
+@use '../../../../../scss/font' as *;
+@use '../../../../../scss/variables' as *;
+
+.wrapper {
+
+    .title {
+        @extend %text-subtitle-2;
+        color: $colour-primary;
+        margin: 0 0 32px;
+    }
+
+    .inputs {
+        display: grid;
+        gap: 24px;
+
+        @media screen and (min-width: $md) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        > * {
+            &:nth-child(1),
+            &:nth-child(2) {
+                grid-column: span 1; 
+            }
+
+            &:nth-child(3) {
+                @media screen and (min-width: $md) {
+                    grid-column: span 2; 
+                }
+            }
+        }
+    }
+
+    .textarea textarea {
+        height: auto;
+        resize: none;
+        overflow: auto;
+        min-height: 126px;
+    }
+}

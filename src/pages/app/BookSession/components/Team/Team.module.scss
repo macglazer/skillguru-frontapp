@@ -1,0 +1,122 @@
+@use "../../../../../scss/variables" as *;
+@use "../../../../../scss/font" as *;
+
+.button {
+  @extend %text-button-md;
+  color: $colour-secondary;
+  background-color: transparent;
+  margin-top: 16px;
+  cursor: pointer;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    font-size: 24px;
+  }
+}
+
+.btnRemove {
+  @extend %text-button-md;
+  color: $colour-base-800;
+  background-color: $colour-base-400;
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.6s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken($colour-base-400, 10%);
+  }
+
+  svg {
+    font-size: 14px;
+  }
+}
+
+.header {
+  margin: 24px 0;
+  padding: 6.5px 0;
+
+  label {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 9px;
+  }
+
+  .label {
+    @extend %text-button-md;
+    color: $colour-primary;
+  }
+}
+
+.footer {
+  margin: 24px 0 0;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  > .row {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .input {
+      flex: 1;
+    }
+
+    @media screen and (min-width: $lg) {
+      flex-direction: row;
+    }
+  }
+
+  .circle {
+    @extend %text-button-md;
+    color: $colour-base-800;
+    background-color: $colour-base-400;
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.6s;
+  }
+}
+
+.row {
+  position: relative;
+
+  .circle {
+    order: 1;
+  }
+
+  .input {
+    order: 3;
+
+    @media screen and (min-width: $lg) {
+      order: 2;
+    }
+  }
+
+  .btnRemove {
+    order: 2;
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    @media screen and (min-width: $lg) {
+      position: relative;
+      order: 3;
+    }
+  }
+}

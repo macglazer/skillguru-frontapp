@@ -1,0 +1,266 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/font" as *;
+@use "../../../scss/mixins" as *;
+
+.wrapper {
+  @include media-lg-and-up {
+    margin: 49px auto 72px;
+  }
+}
+
+.grid.gridCenter {
+  max-width: 700px;
+  margin: auto;
+
+  .main {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include media-lg-and-up {
+      gap: 56px;
+    }
+  }
+}
+
+.faq {
+  padding: 16px 20px 24px;
+
+  @include media-lg-and-up {
+    padding: 0;
+  }
+}
+
+.grid.withSidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @include media-lg-and-up {
+    display: grid;
+    gap: 40px;
+    grid-template-areas: "main" "sidebar" "faq";
+    grid-template-areas: "main sidebar" "faq .";
+    padding: 0 32px;
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+    order: 2;
+  }
+
+  .main {
+    grid-area: main;
+    order: 1;
+
+    @include media-lg-and-up {
+      display: flex;
+      flex-direction: column;
+      gap: 56px;
+    }
+  }
+
+  .faq {
+    grid-area: faq;
+    order: 3;
+  }
+}
+
+.submitBtn {
+  padding: 16px 32px;
+  background-color: $colour-secondary;
+  width: 100%;
+  border-radius: 50px;
+  color: #fff;
+}
+
+.sidebar {
+  &.sidebarDesktop {
+    display: none;
+  }
+
+  &.sidebarMobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 16px;
+  }
+
+  @include media-lg-and-up {
+    max-width: 350px;
+
+    &.sidebarMobile {
+      display: none;
+    }
+
+    &.sidebarDesktop {
+      display: flex;
+      align-items: flex-start;
+    }
+  }
+}
+
+.PlanDetails {
+  padding: 30px;
+  background-color: #ccc;
+}
+
+.mainContent {
+  padding: 24px 20px 32px;
+  border: 1px solid $colour-base-400;
+  border-radius: 8px;
+  margin: auto;
+  width: 100%;
+
+  @include media-lg-and-up {
+    padding: 32px 24px 32px;
+  }
+
+  .stepper {
+    margin-bottom: 32px;
+  }
+
+  .title {
+    @extend %text-heading-3;
+    color: $colour-primary;
+    margin-bottom: 20px;
+
+    @include media-lg-and-up {
+      margin-bottom: 16px;
+    }
+  }
+
+  .subtitle {
+    @extend %text-subtitle-1;
+    color: $colour-primary;
+    margin-bottom: 20px;
+
+    @include media-lg-and-up {
+      margin-bottom: 20px;
+    }
+  }
+
+  .description {
+    @extend %text-button-md;
+    color: $colour-base-800;
+    margin-bottom: 20px;
+
+    @include media-lg-and-up {
+      margin-bottom: 32px;
+    }
+  }
+
+  .content {
+    margin-bottom: 20px;
+
+    @include media-lg-and-up {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.detailsForm {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.checkboxFieldset {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+
+  span {
+    @extend %text-button-sm;
+    color: $colour-base-800;
+    display: inline-block;
+    flex: 1;
+  }
+
+  .checkIcon {
+  }
+
+  input {
+    display: none;
+  }
+}
+
+.inlineFieldset {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+
+  .label {
+    @extend %text-button-md;
+    color: $colour-primary;
+    flex: 1;
+  }
+
+  .control {
+  }
+}
+
+.rowsFieldset {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 12px;
+  flex-wrap: wrap;
+
+  .label {
+    @extend %text-button-md;
+    color: $colour-primary;
+  }
+
+  .control {
+  }
+
+  .info {
+    @extend %text-caption;
+    color: $colour-base-600;
+  }
+}
+
+.textarea {
+  @extend %text-caption;
+  color: $colour-base-800;
+  border: 1px solid $colour-base-400;
+  border-radius: 12px;
+  padding: 14px;
+  text-align: left;
+  resize: none;
+  min-height: 126px;
+
+  &::placeholder {
+    color: $colour-base-600;
+  }
+
+  outline: none;
+  border-radius: 8px;
+  border: 1px solid $colour-base-400;
+  padding: 8px;
+  resize: none;
+  scrollbar-width: 0;
+  resize: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scrollbar-color: transparent transparent;
+  scrollbar-width: none;
+  height: auto;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}

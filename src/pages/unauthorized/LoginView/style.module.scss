@@ -1,0 +1,11 @@
+@use '../../../scss/font' as *;
+@use '../../../scss/variables' as *;
+
+.form {
+    color:$colour-primary;
+}
+.link {
+    @extend %text-reset-button, %text-caption;
+    color: $colour-primary;
+    margin-top: 9px;
+}

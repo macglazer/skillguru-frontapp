@@ -1,0 +1,19 @@
+@use '../../scss/variables' as *;
+
+.content {
+	min-height: calc(100vh - $layout-topbar-height);
+	margin-top: $layout-topbar-height;
+	background-color: $colour-base-000;
+	overflow: hidden;
+	z-index: 1;
+
+	@media screen and (min-width: $sm) {
+		margin-left: $layout-quick-sidebar-width;
+	}
+
+	&.isSidebarOpen {
+		@media screen and (min-width: $lg) {
+			margin-left: $layout-full-sidebar-width;
+		}
+	}
+}

@@ -1,0 +1,21 @@
+.Content {
+    position: relative;
+    transition: 0.5s;
+
+    &.WithOverlay::after {
+        position: absolute;
+        background-image: linear-gradient(to top, rgb(255, 255, 255) calc(100% - 30px), rgba(255, 255, 255, 0));
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: calc(100% - 20px);
+        content: "";
+        transition: 0.5s;
+        opacity: 1;
+    }
+
+    &.WithOverlay.ContentExpanded::after {
+        opacity: 0;
+        transition: 0.5s;
+    }
+}

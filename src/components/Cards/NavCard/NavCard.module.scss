@@ -1,0 +1,65 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/font" as *;
+
+.card {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	gap: 10px;
+	padding: 24px 20px;
+	text-decoration: none;
+     	border: 1px solid $colour-base-200;
+    	border-radius: 12px;
+    	transition: background-color;
+
+    	&:hover {
+        	background-color: $colour-base-200;
+    	}
+
+	&:hover {
+		background-color: $colour-base-200;
+	}
+	&Icon {
+		svg {
+			width: 40px;
+			height: 40px;
+		}
+	}
+
+	&Title {
+		@extend %text-button-md;
+		color: $colour-primary;
+		display: flex;
+		gap: 10px;
+		align-items: center;
+		justify-content: flex-start;
+
+		span {
+			flex: 1;
+		}
+
+		svg {
+			width: 14px;
+			height: 14px;
+		}
+	}
+
+	&Text {
+		@extend %text-button-sm;
+		color: $colour-base-800;
+		display: none;
+	}
+
+	@media screen and (min-width: $lg) {
+		padding: 24px 32px;
+
+		&Title {
+			font-size: 16px;
+		}
+
+		&Text {
+			display: block;
+		}
+	}
+}

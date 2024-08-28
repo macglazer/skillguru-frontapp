@@ -1,0 +1,81 @@
+@use '../../../scss/variables' as *;
+@use '../../../scss/font' as *;
+
+.wrapper {
+    position: relative;
+}
+
+.wrapper:hover .toggle:not(.disabled) {
+    background-color: $colour-base-200;
+}
+
+.toggle {
+    z-index: 1;
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg.dots {
+        width: 20px;
+        height: 20px;
+        font-size: 20px;
+        color: #98A2B3;
+    }
+
+    &:hover {
+        background-color: $colour-base-200;
+        cursor: pointer;
+    }
+
+    &.disabled {
+        &:hover {
+            cursor: default;
+            background-color: transparent;
+        }
+
+        .dots {
+            color: #ccc;
+        }
+    }
+}
+
+.list {
+    z-index: 2;
+    box-shadow: 0px 4px 20px 0px #A5A5A536;
+    position: absolute;
+    right: 50%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn {
+    @extend %text-button-sm;
+    color: $colour-base-800;
+    background-color: $colour-base-000;
+    text-align: left;
+    padding: 16px 12px;
+    min-width: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+
+    .btnLeadingIcon {
+        width: 16px;
+        height: 16px;
+    }
+
+    &.btnDanger {
+        color: $colour-error-100;
+    }
+
+    &:hover {
+        background-color: $colour-base-200;
+        cursor: pointer;
+    }
+}

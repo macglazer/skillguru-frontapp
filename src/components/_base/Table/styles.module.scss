@@ -1,0 +1,91 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/font" as *;
+
+$table-border-colour: #EAECF0;
+
+.Table {
+  position: relative;
+  background: transparent;
+  width: 100%;
+  border: 1px solid $table-border-colour;
+  border-radius: 8px;
+
+  &.minWidth {
+    overflow: auto;
+    max-width: 100%;
+  }
+}
+
+.Row {
+  display: flex;
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+.BorderTop,
+.Row + .Row {
+  border-top: 1px solid $table-border-colour;
+}
+
+.RowSticky {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.Cell {
+  @extend %text-body-2;
+  color: $colour-base-800;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px 24px;
+  overflow: hidden;
+
+  &.heading {
+    @extend %text-button-sm;
+    color: $colour-base-800;
+  }
+
+  &.primary {
+    color: $colour-primary;
+  }
+}
+
+.Cell.noPadding {
+  padding: 0;
+}
+
+.Cell.DisplayOverflow {
+  overflow: visible;
+}
+
+.Cell_AlignLeft {
+  justify-content: flex-start;
+}
+
+.Cell_AlignCenter {
+  justify-content: center;
+}
+
+.Cell_AlignRight {
+  justify-items: flex-end;
+}
+
+.Cell_Flex {
+  flex: 1;
+}
+
+.Cell_NoFlex {
+  flex: none;
+}
+
+.Row:not(.RowHeading):hover,
+.Row:not(.RowHeading):hover .Cell,
+.Cell.Clickable:hover {
+  background: $colour-base-400;
+}
+
+.Clickable {
+  cursor: pointer;
+}

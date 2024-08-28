@@ -1,0 +1,36 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/mixins" as *;
+@use "../../../scss/main" as *;
+@use "../../../scss/font" as *;
+
+.container {
+  position: relative;
+  padding: 120px 0;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include media-sm-and-up {
+    background-color: #fcfcfc;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 462px;
+    padding: 32px 24px;
+    border-radius: 8px;
+    background-color: $colour-base-000;
+    @include media-sm-and-up {
+      border: 1px solid $colour-base-200;
+    }
+  }
+
+  .logo {
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      transform:translate(-50%, -50%)
+  }
+}

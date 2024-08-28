@@ -1,0 +1,55 @@
+@use "@styles/variables" as *;
+@use "@styles/mixins" as *;
+@use "@styles/font" as *;
+
+.title {
+  @extend %text-button-md;
+  color: $colour-primary;
+}
+
+.contact {
+  margin-bottom: 20px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  text-align: left;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0 12px 0 4px;
+
+  &:hover,
+  &.isSelected {
+    background-color: $colour-base-200;
+    border-radius: 8px;
+  }
+}
+
+.message {
+  @extend %text-caption;
+  color: $colour-base-800;
+  font-size: 12px;
+}
+
+.unread {
+  flex-grow: 2;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 50px;
+  p {
+    @extend %text-button-sm;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $colour-secondary;
+    color: $colour-base-000;
+    text-align: center;
+    line-height: 20px;
+  }
+}

@@ -1,0 +1,30 @@
+@use "@styles/variables" as *;
+@use "@styles/mixins" as *;
+@use "@styles/font" as *;
+
+.box {
+  @media (min-width: $md) {
+    padding: 32px 24px;
+    border: 1px solid $colour-base-200;
+    border-radius: 8px;
+  }
+}
+
+.list {
+  margin-top: 24px;
+  scrollbar-width: none;
+  list-style: none;
+  height: calc(100vh - 360px);
+  max-height: 800px;
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.infoBox {
+  @extend %text-caption;
+  margin-top: 24px;
+  color: $colour-base-800;
+}

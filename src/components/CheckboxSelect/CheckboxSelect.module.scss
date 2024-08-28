@@ -1,0 +1,84 @@
+@use '../../scss/variables' as *;
+
+.wrapper {
+	position: relative;
+	position: 0;
+
+	.button {
+		position: relative;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		gap: 15px;
+		background: $light-color;
+		justify-content: space-between;
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 20px;
+		letter-spacing: 0.01em;
+		border-radius: 15px;
+		padding: 15px 20px;
+		cursor: pointer;
+
+		&:has(+ .options) {
+			&:before {
+				content: '';
+				display: block;
+				width: 100%;
+				height: 15px;
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				background-color: $light-color;
+			}
+		}
+	}
+
+	.options {
+		position: absolute;
+		z-index: 99;
+		bottom: 0;
+		left: 0;
+		width: max-content;
+		width: 100%;
+		transform: translateY(calc(100% - 1px));
+		display: flex;
+		border-radius: 0 0 15px 15px;
+		background-color: $light-color;
+		max-height: 254px;
+		overflow-x: hidden;
+		overflow-y: auto;
+		box-shadow: 0px 18px 20px 0px #0000001a;
+
+		:global {
+			.multi-select {
+				margin-top: 0;
+			}
+
+			.multi-select__options {
+				padding: 15px 9px 18px;
+				grid-template-columns: 1fr !important;
+				gap: 5px;
+
+				.multi-select__checkbox {
+					span {
+						font-size: 12px;
+						font-weight: 400;
+						line-height: 22px;
+						letter-spacing: 0.01em;
+
+						&:after {
+							top: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@media screen and (min-width: $xl) {
+		.options {
+			min-width: 291px;
+		}
+	}
+}

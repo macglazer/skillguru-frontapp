@@ -1,0 +1,31 @@
+{
+    "goalAchievement": {
+        "question": "Czy osiągnałeś swoje cele?",
+        "options": [
+            "Tak",
+            "Trudno powiedzieć",
+            "Nie" 
+        ]
+    },
+    "subscriptionEndReasons": {
+        "question": "Dlaczego kończysz subskrypcję?",
+        "options": [
+            "Ponieważ x1",
+            "Ponieważ x2",
+            "Ponieważ x3"
+        ]
+    },
+    "serviceDescription": {
+        "question": "Jak byś opisał usługi?",
+        "options": [
+            "Kompletnie nie spełniło moich oczekiwań",
+            "Lekkie rozczarowanie",
+            "Po prostu okej",
+            "Bardzo dobra jakość",
+            "Przewyższyło moje oczekiwania"
+        ]
+    },
+    "additional": {
+        "question": "Inne uwagi"
+    }
+}

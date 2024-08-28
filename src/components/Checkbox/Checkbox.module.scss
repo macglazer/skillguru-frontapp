@@ -1,0 +1,140 @@
+@use '../../scss/variables' as *;
+@use '../../scss/font' as *;
+
+.checkbox {
+	cursor: pointer;
+
+	.icon {
+		width: 20px;
+		height: 20px;
+	}
+
+	.slideField, .icon {
+		flex: none;
+	}
+
+	span {
+		flex: 1;
+	}
+
+	&.disabled {
+		opacity: 0.35;
+		cursor: auto;
+	}
+
+	&Label {
+		display: flex;
+		position: relative;
+		gap: 10px;
+		font-size: 16px;
+		color: $dark-color;
+		align-items: flex-start;
+
+		&ButtonSm span {
+			@extend %text-button-sm;
+		}
+
+		&Caption span {
+			@extend %text-caption;
+		}
+
+		&Base80 span {
+			color: $colour-base-800;
+		}
+
+		&Primary span {
+			color: $colour-primary;
+		}
+	}
+
+	&[data-is-radio='true'] {
+		.checkboxLabel {
+			&:before {
+				border-radius: 50%;
+			}
+
+			&:after {
+				content: '';
+				top: 4px;
+				transform: translateY(0);
+				width: 12px;
+				height: 12px;
+				border-radius: 50%;
+				background-color: $primary-color;
+			}
+		}
+	}
+
+	&Field {
+		display: none;
+		width: 0;
+		height: 0;
+		opacity: 0;
+		visibility: hidden;
+
+		&:checked {
+			+ .checkboxLabel {
+				&::after {
+					opacity: 1;
+				}
+
+				&::before {
+					background-color: $colour-primary;
+				}
+			}
+		}
+	}
+
+	&[data-is-error='true'] {
+		.checkboxLabel {
+			&:before {
+				border: 1px solid $danger-color;
+			}
+		}
+	}
+}
+
+.slide {
+	.checkboxLabel {
+		&:before,
+		&:after {
+			display: none;
+		}
+	}
+
+	&Field {
+		position: relative;
+		display: block;
+		width: 34px;
+		height: 20px;
+		border-radius: 20px;
+		background-color: #e2e9fc;
+		transition: background-color 0.24s;
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 3px;
+			display: block;
+			width: 14px;
+			height: 14px;
+			border-radius: 50%;
+			background-color: $light-color;
+			transform: translateY(-50%);
+			transition: transform 0.24s;
+		}
+	}
+
+	.checkboxField:checked {
+		+ .checkboxLabel {
+			.slideField {
+				background-color: $success-color;
+
+				&:before {
+					transform: translateY(-50%) translateX(100%);
+				}
+			}
+		}
+	}
+}

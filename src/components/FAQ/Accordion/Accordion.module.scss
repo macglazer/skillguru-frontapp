@@ -1,0 +1,20 @@
+@use '../../../scss/variables' as *;
+@use '../../../scss/font' as *;
+
+.wrapper {
+	.title {
+		@extend %text-heading-3;
+		color: $secondary-color;
+	}
+
+	.title + ul {
+		margin-top: 16px;
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		width: 100%;
+	}
+}

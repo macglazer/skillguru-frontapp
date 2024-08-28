@@ -1,0 +1,262 @@
+@use '../../variables' as *;
+@use 'sass:map';
+
+.mentor-card {
+	position: relative;
+	display: grid;
+	grid-template-columns: 3fr 1fr 2fr 2fr 3fr;
+	gap: 20px;
+	width: 100%;
+	padding: 20px 15px;
+	border-radius: 15px;
+	margin: 30px 0;
+	border: 1px solid rgba($gray-color, 0.65);
+
+	& > * {
+		grid-column: 1/-1;
+	}
+
+	// Profile image
+	&__profile {
+		height: 280px;
+		border-radius: 8px;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	// Overview
+	&__overview {
+		&-name {
+			margin-bottom: 0.35em;
+			font-size: 22px;
+		}
+
+		&-spec {
+			margin-bottom: 0.5em;
+			font-size: 14px;
+			font-weight: 500;
+
+			&-description {
+				color: $primary-color;
+				margin-bottom: 0.5em;
+				font-size: 14px;
+				line-height: 1.5em;
+				font-weight: inherit;
+			}
+		}
+
+		&-link {
+			width: 100%;
+			text-align: center;
+		}
+
+		&-responder {
+			position: absolute;
+			top: 10px;
+			right: 7.5px;
+			display: block;
+			width: max-content;
+			padding: 4px 15px;
+			border-radius: 15px;
+			background-color: $success-color;
+			box-shadow: rgba(33, 35, 38, 0.4) 0px 10px 10px -10px;
+			font-size: 12px;
+			letter-spacing: 0.125px;
+			color: $light-color;
+		}
+
+		&-reviews {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+			font-size: 12px;
+		}
+
+		&-stars {
+			font-size: 1.2rem !important;
+		}
+
+		&-description {
+			margin: 0 0 1em;
+			padding: 1em 0;
+			font-size: 14px;
+			line-height: 1.5em;
+			font-weight: inherit;
+			border-top: 1px solid rgba($gray-color, 0.65);
+		}
+
+		&-skills {
+			font-size: 12px;
+			margin-bottom: 20px;
+		}
+
+		&-contact{
+			display: flex;
+			gap: 15px;
+			padding: 12px 0;
+			margin-top: 15px;
+			border-top: 1px solid rgba($gray-color, 0.65);
+			font-size: 14px;
+			font-weight: 700;
+		}
+	}
+
+	// Expectations
+	&__expectations {
+		display: none;
+	}
+
+	// Price
+	&__price {
+		font-size: 24px;
+		font-weight: 700;
+		text-align: center;
+		margin-bottom: 1em;
+
+		small {
+			font-size: 0.65em;
+			font-weight: 500;
+		}
+
+		&--desktop {
+			display: none;
+		}
+	}
+
+	// *******************
+	// Tablet
+	// *******************
+	@media screen and (min-width: map-get($breakpoints, 'md')) {
+		&__profile {
+			grid-column: 1/3;
+			height: 310px;
+		}
+
+		&__overview {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			align-content: flex-start;
+			grid-column: 3/-1;
+			grid-row: 1/3;
+			padding: 0;
+
+			& > * {
+				width: 100%;
+			}
+
+			&-name {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				gap: 15px;
+				font-size: 26px;
+			}
+
+			&-responder {
+				position: relative;
+				top: unset;
+				right: unset;
+			}
+
+			&-spec,
+			&-description {
+				font-size: 16px;
+			}
+
+			&-reviews {
+				font-size: 14px;
+			}
+
+			&-stars {
+				font-size: 1.4rem !important;
+			}
+
+			&-link {
+				align-self: flex-end;
+			}
+		}
+
+		&__price {
+			font-size: 28px;
+			margin-bottom: 0;
+			text-align: left;
+			grid-row: 2/3;
+
+			&--desktop {
+				display: flex;
+				align-items: flex-end;
+				grid-column: 1/2;
+			}
+
+			&--mobile {
+				display: none;
+			}
+		}
+	}
+	// *******************
+	// Tablet
+	// *******************
+	@media screen and (min-width: map-get($breakpoints, 'xl')) {
+		&__profile {
+			grid-column: 1/2;
+		}
+
+		&__overview {
+			grid-column: 2/5;
+
+			&-link {
+				max-width: 260px;
+			}
+		}
+
+		&__expectations {
+			display: block;
+			grid-column: 5/-1;
+			grid-row: 1/3;
+			padding-left: 15px;
+			border-left: 1px solid rgba($gray-color, 0.65);
+
+			&-trail {
+				display: block;
+				width: max-content;
+				padding: 4px 15px;
+				border-radius: 15px;
+				font-size: 12px;
+				background-color: rgba($gray-color, 0.25);
+				font-weight: 700;
+				margin-left: auto;
+				margin-bottom: 24px;
+			}
+
+			&-title {
+				font-size: 12px;
+				padding-bottom: 1.2em;
+				border-bottom: 1px solid rgba($gray-color, 0.65);
+			}
+
+			&-list{
+				max-height: 350px;
+				overflow-y: scroll;
+				-ms-overflow-style: none;
+				scrollbar-width: none;
+				overflow-y: scroll;
+				&::-webkit-scrollbar {
+					display: none;
+				}
+			}
+			
+			&-item{
+				font-size: 12px;
+				color: rgba(0, 0, 0, 0.75);
+				padding: 1em 0;
+				border-bottom: 1px solid rgba($gray-color, 0.65);
+			}
+		}
+	}
+}

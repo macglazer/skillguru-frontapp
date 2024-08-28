@@ -1,0 +1,245 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/font" as *;
+
+.wrapper {
+	background-color: $light-color;
+	border-radius: 15px;
+	border: 1px solid $colour-base-400;
+	color: inherit;
+	display: grid;
+	grid-template-columns: 1fr;
+	justify-items: center;
+	// padding: 16px 20px;
+	position: relative;
+	text-decoration: none;
+
+	@media (min-width: $md) {
+		// padding: 24px;
+	}
+
+	.header {
+		width: 100%;
+		padding: 16px 20px;
+	}
+
+	.user {
+		display: flex;
+		gap: 12px;
+		align-items: center;
+		justify-content: flex-start;
+
+		.avatar {
+			border-radius: 50%;
+			display: block;
+			height: 54px;
+			object-fit: cover;
+			overflow: hidden;
+			width: 54px;
+		}
+
+		.userHeader {
+			flex: 1;
+		}
+	}
+
+	.name,
+	.price,
+	.profession,
+	.special,
+	.tag,
+	.title {
+		font-family: $font-family-montserrat;
+		margin: 0;
+	}
+
+	.special {
+		color: $secondary-color;
+		font-size: 12px;
+		font-weight: 600;
+		line-height: 21.6px;
+		display: none;
+		padding: 4px 16px;
+		background-color: #f7fdf8;
+		border-radius: 24px;
+
+		&__success {
+			color: $success-color;
+		}
+
+		&__error {
+			color: $danger-color;
+		}
+
+		&__warning {
+			color: $primary-color;
+		}
+
+		@media (min-width: $lg) {
+			display: block;
+		}
+	}
+
+	.name {
+		font-size: map-get($font-size, xs);
+		font-weight: 600;
+	}
+
+	.profession {
+		color: #8e9abb;
+		font-size: 12px;
+		font-weight: 500;
+		line-height: 21.6px;
+	}
+
+	.description {
+		color: #8e9abb;
+		font-size: 12px;
+		font-weight: 500;
+		line-height: 21.6px;
+
+		@media (min-width: $md) {
+			font-size: 14px;
+			line-height: 25.2px;
+		}
+	}
+
+	.title {
+		color: $secondary-color;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 28.8px;
+
+		@media (min-width: $md) {
+			font-size: 20px;
+			line-height: 26px;
+		}
+	}
+
+	.price {
+		color: $secondary-color;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 26px;
+	}
+
+	.userNameRow {
+		display: flex;
+		gap: 16px;
+		align-items: center;
+		justify-content: flex-start;
+	}
+
+	.reviews {
+		display: flex;
+		gap: 12px;
+		align-self: flex-start;
+
+		span {
+			color: $secondary-color;
+			font-size: 12px;
+			font-weight: 500;
+			line-height: 21.6px;
+		}
+
+		.stars {
+			display: flex;
+			gap: 4px;
+		}
+	}
+
+
+
+	.body {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+		padding: 8px 16px 16px;
+		width: 100%;
+
+		@media (min-width: $md) {
+			gap: 16px;
+		}
+	}
+
+	.footer {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		padding: 16px 16px 24px;
+
+		.price {
+			align-self: flex-end;
+		}
+
+		@media (min-width: $md) {
+			align-items: center;
+
+			.price {
+				align-self: unset;
+			}
+		}
+	}
+
+	.rowInfo {
+		display: flex;
+		gap: 16px;
+		align-items: flex-start;
+		justify-content: flex-start;
+		border-top: 1px dashed $box-border-colour;
+		padding: 16px;
+		width: 100%;
+	}
+
+	.infoCell {
+		@extend %text-caption;
+		color: $colour-base-600;
+		display: flex;
+		gap: 4px;
+		align-items: center;
+		justify-content: flex-start;
+	}
+
+	.moreBtn {
+		background-color: transparent;
+		border: none;
+		color: $primary-color;
+		cursor: pointer;
+		display: block;
+		font-family: $font-family-montserrat;
+		font-size: 12px;
+		font-weight: 600;
+		line-height: 21.6px;
+		margin-top: 8px;
+		text-align: left;
+	}
+
+	.descriptionWrapper {
+		display: flex;
+		flex-direction: column;
+		position: relative;
+	}
+
+	.cover {
+		position: absolute;
+		background-image: linear-gradient(to top, rgb(255, 255, 255) calc(100% - 30px), rgba(255, 255, 255, 0));
+		top: 20px;
+		right: 0;
+		width: 100%;
+		height: calc(100% - 20px);
+		content: "";
+		transition: 0.5s;
+		opacity: 1;
+	}
+
+	.animateDescriptionContent {
+		position: relative;
+		transition: 0.5s;
+
+
+		&.animateDescriptionContentExpanded::after {
+			opacity: 0;
+			transition: 0.5s;
+			// background-image: linear-gradient(to top, rgb(255, 255, 255, 0) calc(100% - 30px), rgba(255, 255, 255, 0));
+		}
+	}
+}

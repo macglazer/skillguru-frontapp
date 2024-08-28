@@ -1,0 +1,36 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/font" as *;
+@use "../../../scss/mixins" as *;
+
+.modal {
+  .box {
+    max-width: 600px;
+  }
+  & h3 {
+    margin-top: 60px;
+    @include media-lg-and-up {
+      font-size: 28px !important;
+    }
+  }
+
+  .info {
+    @extend %text-body-1;
+    margin-bottom: 20px;
+    color: $colour-base-800;
+  }
+
+  .btnBox {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 20px;
+    border-top: 1px solid $colour-base-200;
+    & button {
+      @extend %text-button-md;
+    }
+    & .mainBtn {
+      background-color: $colour-error-200;
+      color: $colour-error-100;
+    }
+  }
+}

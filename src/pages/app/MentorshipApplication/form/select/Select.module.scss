@@ -1,0 +1,49 @@
+@use "../../../../../scss/variables" as *;
+@use "../../../../../scss/font" as *;
+@use "../../../../../scss/mixins" as *;
+
+.toggle {
+    width: 188px;
+    border-radius: 12px;
+    border: 1px solid $colour-base-400;
+    padding: 14px;
+    box-sizing: border-box;
+    gap: 16px;
+    height: 54px;
+    justify-content: space-between;
+
+    .toggleText {
+        @extend %text-body-2;
+        color: $colour-base-800;
+    }
+}
+
+.list {
+    max-height: 480px;
+    overflow: auto;
+    top: 0;
+    right: 32px;
+    width: 320px;
+    max-width: 90vw;
+    z-index: 1000;
+}
+
+.search {
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    
+    input {
+        padding: 16px;
+        padding-left: 36px;
+        width: 100%;
+    }
+
+    svg {
+        position: absolute;
+        left: 4px;
+        font-size: 24px;
+        color: $colour-primary;
+    }   
+}

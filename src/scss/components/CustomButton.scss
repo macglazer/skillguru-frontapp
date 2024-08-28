@@ -1,68 +1,73 @@
 @use '../variables' as *;
 @use '../mixins' as *;
 
-.custom-btn{
-  display: inline-block;
-  padding: 12px 24px;
-  border-radius: 12px;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color $duration;
+.custom-btn {
+	display: inline-block;
+	padding: 12px 24px;
+	border: none;
+	border-radius: 100px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background-color $duration;
 
-  &--primary{
-    background-color: $primary-color;
-    color: $light-color;
+	&--primary {
+		background-color: $primary-color;
+		color: $light-color;
 
-    &:hover{
-      background-color: darken($primary-color, 2%);
-    }
-    &:active{
-      background-color: darken($primary-color, 3%);
-    }
-    &:disabled{
-      background-color: #7a7a7a;;
-    }
-  }
+		&:hover {
+			background-color: darken($primary-color, 2%);
+		}
+		&:active {
+			background-color: darken($primary-color, 3%);
+		}
+		&:disabled {
+			background-color: #7a7a7a;
+		}
+	}
 
-  &--secondary{
-    background-color: $secondary-color;
-    color: $dark-color;
+	&--secondary {
+		background-color: $secondary-color;
+		color: $dark-color;
 
-    &:hover{
-      background-color: darken($secondary-color, 2%);
-    }
-    &:active{
-      background-color: darken($secondary-color, 3%);
-    }
-  }
+		&:hover {
+			background-color: darken($secondary-color, 2%);
+		}
+		&:active {
+			background-color: darken($secondary-color, 3%);
+		}
+	}
 
-  &--light{
-    background-color: $light-color;
-    color: $dark-color;
+	&--light {
+		background-color: $light-color;
+		color: $dark-color;
 
-    &:hover{
-      background-color: darken($light-color, 2%);
-    }
-    &:active{
-      background-color: darken($light-color, 3%);
-    }
-  }
+		&:hover {
+			background-color: darken($light-color, 2%);
+		}
+		&:active {
+			background-color: darken($light-color, 3%);
+		}
+	}
 
-  &--dark{
-    background-color: $dark-color;
-    color: $light-color;
+	&--dark {
+		background-color: $dark-color;
+		color: $light-color;
 
-    &:hover{
-      background-color: darken($dark-color, 2%);
-    }
-    &:active{
-      background-color: darken($dark-color, 3%);
-    }
-  }
+		&:hover {
+			background-color: darken($dark-color, 2%);
+		}
+		&:active {
+			background-color: darken($dark-color, 3%);
+		}
+	}
 
-  &--transparent{
-    background-color: transparent;
-    color: $light-color;
-  }
+	&--transparent {
+		background-color: transparent;
+		color: $light-color;
+	}
+
+	&--danger {
+		background-color: $danger-color;
+		color: $light-color;
+	}
 }

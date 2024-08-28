@@ -1,0 +1,58 @@
+@use "../../../../scss/variables" as *;
+@use "../../../../scss/font" as *;
+
+.wrapper {
+    max-width: 100%;
+    overflow: auto;
+}
+
+.pagination {
+    width: 100%;
+}
+
+.alert {
+    display: flex;
+    border: 1px solid $colour-error-100;
+    color: $colour-error-100;
+    background-color: $colour-error-200;
+    border-radius: 12px;
+    padding: 12px 16px;
+
+    p {
+        @extend %text-button-sm;
+    }
+}
+
+.pdfBtn {
+    @extend %text-reset-button, %text-button-md;
+    color: $colour-primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border: 1px solid #E2E9FC;
+    border-radius: 8px;
+    text-wrap: nowrap;
+    margin-right: 16px;
+
+    &:hover {
+        background-color: #fff;
+    }
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+
+.emptyStateHeading {
+    display:flex;
+    justify-content: space-between;
+    max-width:900px;
+}
+
+.emptyCell {
+    border-top:1px solid $colour-base-400
+}

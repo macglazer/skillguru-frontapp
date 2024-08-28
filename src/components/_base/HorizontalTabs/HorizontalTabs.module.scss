@@ -1,0 +1,42 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/font" as *;
+
+.tabs {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.button {
+    @extend %text-button-md;
+    color: $colour-base-400;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-wrap: nowrap;
+    border-bottom-width: 3px;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    padding: 16px 24px;
+
+    &.active {
+        border-bottom-color: $colour-secondary;
+        color: $colour-secondary;
+    }
+
+    &.disabled {
+        cursor: not-allowed;
+    }
+}

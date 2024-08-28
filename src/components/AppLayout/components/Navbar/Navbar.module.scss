@@ -1,0 +1,207 @@
+@use '../../../../scss/variables' as *;
+
+.navbar {
+	position: fixed;
+	left: 50%;
+	top: 0;
+	width: 100%;
+	max-width: $xl;
+	z-index: 999;
+	transform: translateX(-50%);
+	
+	&Logo {
+		color: #262B5E;
+		@media screen and (min-width: $md) {
+			color: $colour-base-000;
+		}
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		z-index: 0;
+		display: block;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: $light-color;
+		border-bottom: 1px solid #e2e9fc;
+	}
+
+	:global(.container) {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 24px;
+		padding-top: 12px;
+		padding-bottom: 12px;
+	}
+
+	.mobile {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 24px;
+	}
+
+	&Button {
+		position: relative;
+		padding: 10px;
+		width: 37px;
+		height: 30px;
+		background-color: transparent;
+		cursor: pointer;
+
+		span {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			display: block;
+			width: 25px;
+			height: 2px;
+			border-radius: 1px;
+			background-color: $secondary-color;
+			transition: transform 0.24s;
+
+			&:first-of-type {
+				transform: translateX(-50%) translateY(5px);
+			}
+			&:last-of-type {
+				transform: translateX(-50%) translateY(-5px);
+			}
+		}
+	}
+
+	&Menu {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: -2;
+		transform: translateY(-100%);
+		background-color: $secondary-color;
+		width: 100%;
+		padding: 16px 20px 40px;
+		transition: transform 0.24s;
+		transform-origin: top;
+
+		&Item {
+			display: flex;
+			align-items: center;
+			width: 100%;
+			gap: 10px;
+			padding: 16px 24px;
+			border-radius: 8px;
+			color: $light-color;
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 500;
+			margin-bottom: 12px;
+			line-height: normal;
+			text-decoration: none;
+			letter-spacing: 0.16px;
+			background-color: transparent;
+			cursor: pointer;
+			transition: color 0.24s, background-color 0.24s;
+
+			svg {
+				:global {
+					.on-hover {
+						transition: fill 0.24s;
+					}
+				}
+			}
+
+			&:hover, &[data-is-current='true'] {
+				background-color: $primary-color;
+			}
+		}
+	}
+
+	&Expanded {
+		&:before {
+			background-color: $secondary-color;
+		}
+
+		.navbarMenu {
+			transform: translateY(0);
+		}
+
+		.navbarButton {
+			span {
+				background-color: $light-color;
+				&:first-of-type {
+					transform: translateX(-50%) translateY(0) rotate(45deg);
+				}
+				&:last-of-type {
+					transform: translateX(-50%) translateY(0) rotate(-45deg);
+				}
+			}
+		}
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -1;
+		width: 100%;
+		height: 100%;
+		border-radius: 20px;
+		box-shadow: 0 0 14px rgba(70, 80, 90, 0.2);
+		opacity: 0;
+		transition: opacity 0.5s;
+	}
+
+	.utils{
+		margin-top: 40px;
+	}
+
+	@media screen and (min-width: $md) {
+		left: 0;
+		transform: translateX(0);
+		max-width: 322px;
+		height: 100vh;
+		:global {
+			.container {
+				gap: 54px;
+				height: 100%;
+				flex-direction: column;
+				align-items: flex-start;
+				background-color: $secondary-color;
+				padding: 36px 24px 53px;
+			}
+		}
+
+		.mobile {
+			display: none;
+		}
+
+		&Button {
+			display: none;
+		}
+
+		&Menu {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			z-index: 1;
+			width: 100%;
+			height: 100%;
+			top: unset;
+			background-color: transparent;
+			padding: 0;
+			transform: translateY(0);
+
+			&Item {
+				&[data-highlited='true'] {
+					width: 194px;
+				}
+			}
+		}
+	}
+	
+	
+}

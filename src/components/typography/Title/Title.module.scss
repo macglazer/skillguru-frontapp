@@ -1,0 +1,40 @@
+@use '../../../scss/variables' as *;
+
+@mixin responsive-title($size-mobile, $size-desktop) {
+	font-size: $size-mobile;
+
+	@media screen and (min-width: $md) {
+		font-size: calc(
+			($size-mobile + ($size-mobile + ($size-desktop - $size-mobile) / 2)) / 2
+		);
+	}
+	@media screen and (min-width: $lg) {
+		font-size: calc($size-mobile + ($size-desktop - $size-mobile) / 2);
+	}
+	@media screen and (min-width: $xl) {
+		font-size: $size-desktop;
+	}
+}
+
+.title {
+	color: $dark-color;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 1.23em;
+
+	&[data-variant='main'] {
+		@include responsive-title(30px, 36px);
+	}
+	&[data-variant='section'] {
+		margin-bottom: 20px;
+		@include responsive-title(20px, 30px);
+	}
+	&[data-variant='standard'] {
+		margin-bottom: 20px;
+		font-size: 20px;
+	}
+	&[data-variant='section-const'] {
+		margin-bottom: 20px;
+		font-size: 30px;
+	}
+}

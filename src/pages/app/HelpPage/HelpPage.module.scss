@@ -1,0 +1,55 @@
+@use "@styles/variables" as *;
+@use "@styles/mixins" as *;
+@use "@styles/font" as *;
+
+.title,
+.subtitle {
+  color: $colour-primary;
+}
+
+.title {
+  font-size: 28px !important;
+  padding-top: 32px;
+  @include media-xl-and-up {
+    font-size: 32px !important;
+    padding-top: 40px;
+  }
+}
+
+.subtitle {
+  @extend %text-subtitle-1;
+  margin-bottom: 1.5rem;
+}
+.container {
+  padding: 0 4px;
+  @include media-xl-and-up { 
+    padding: 0 8px;
+  }
+}
+.gridContainer {
+  @include media-xl-and-up {
+    display: grid;
+    grid-template-columns: 1fr 50%;
+    padding: 32px 24px;
+    border: 1px solid $colour-base-400;
+    border-radius: 12px;
+  }
+}
+
+.info {
+  @extend %text-button-sm;
+  color: $colour-base-800;
+  margin-bottom: 1.5rem;
+}
+
+.boxWithBtn {
+  @include media-xl-and-up {
+    max-width: 360px;
+  }
+}
+.button {
+  width: 100%;
+  @include media-xl-and-up {
+    width: 246px;
+  }
+}

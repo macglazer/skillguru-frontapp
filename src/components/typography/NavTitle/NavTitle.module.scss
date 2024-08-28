@@ -1,0 +1,32 @@
+@use "@styles/variables" as *;
+
+.title {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 42px;
+  letter-spacing: -1px;
+  padding-top: 32px;
+  margin-bottom: 24px;
+  color:$colour-primary;
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e2e9fc;
+    background-color: $gray-color;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: $lg) {
+    gap: 40px;
+    padding-top: 40px;
+    margin-bottom: 34px;
+  }
+}

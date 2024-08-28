@@ -1,0 +1,30 @@
+@use 'src/scss/variables' as *;
+
+
+.wrapper {
+	background-color: $light-color;
+	min-height: calc(100vh - 73px);
+	height: max-content;
+	padding-bottom: 20px;
+
+	.form {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+
+		&Button {
+			margin-top: 10px;
+		}
+	}
+
+	@media screen and (min-width: $md) {
+		.form {
+			gap: 16px;
+			padding: 24px;
+			border-radius: 8px;
+			border: 1px solid $new-gray-color;
+			max-width: $sm;
+			margin: 0 auto;
+		}
+	}
+}

@@ -11,25 +11,61 @@
 
 body {
 	box-sizing: border-box;
-	font-family: 'Inter', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	min-width: 300px;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+	position: relative;
+	z-index: 1;
+}
+
+#modal-root {
+	position: relative;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+
+#loader-root {
+	position: relative;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 3;
+}
+
+:root {
+	font-size: 10px;
+}
+
 code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+	font-family: 'Montserrat', sans-serif;
 }
 
 a {
 	text-decoration: none;
 	color: inherit;
+	color: $link-color;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	text-decoration-line: underline;
 }
 
 ul,
 ol {
 	list-style-type: none;
 	list-style-position: inside;
+}
+
+button {
+	border: none;
+	outline: transparent;
 }
 
 .top-space {
@@ -91,14 +127,14 @@ ol {
 }
 
 .app__title {
-	color: $primary-color;
+	color: $dark-color;
 	letter-spacing: 0.15px;
 	font-weight: 700;
-	font-size: map-get($font-size, 'md');
+	font-size: map-get($font-size, 'lg');
 }
 
 .app__text {
-	font-family: 'Inter', sans-serif;
+	font-family: "Montserrat", sans-serif;
 	font-weight: 300;
 	font-size: map-get($font-size, 'sm');
 }
@@ -108,7 +144,7 @@ ol {
 	padding: 14px 8px;
 	min-height: 75px;
 	background-color: transparent;
-	font-family: 'Inter', sans-serif;
+	font-family: "Montserrat", sans-serif;
 }
 
 .bg--primary {
@@ -183,13 +219,13 @@ ol {
 	font-weight: 300;
 }
 
-.presentation{
+.presentation {
 	gap: 20px;
 
 	&__invest-target {
 		min-width: 270px;
 		width: 50%;
-	
+
 		@media screen and (min-width: map-get($breakpoints, 'xl')) {
 			max-width: 600px;
 		}
@@ -216,8 +252,7 @@ ol {
 	}
 }
 
-
-.beta{
+.beta {
 	position: fixed;
 	top: 15px;
 	left: 15px;
@@ -229,12 +264,12 @@ ol {
 	pointer-events: none;
 }
 
-.app-list{
+.app-list {
 	display: flex;
 	width: 100%;
 	flex-wrap: wrap;
 
-	&__item{
+	&__item {
 		display: block;
 		background-color: rgb(230, 230, 230);
 		padding: 8px 12px;
@@ -244,12 +279,16 @@ ol {
 	}
 }
 
-.line-separator{
+.line-separator {
 	margin: 32px 0;
 	border-color: $primary-color;
-	opacity: .15;
+	opacity: 0.15;
 
 	@media screen and (min-width: map-get($breakpoints, 'md')) {
 		margin: 64px 0;
 	}
+}
+
+textarea, button, a, input {
+	@include roboto;
 }

@@ -1,0 +1,283 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/font" as *;
+@use "../../../scss/mixins" as *;
+
+.PaginationSkeleton {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+}
+
+.mentorSection {
+  padding: 32px 0;
+  @media screen and (min-width: $xl) {
+    padding: 40px 0;
+  }
+}
+.userIdentity {
+  padding: 0 !important;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.header {
+  h2 {
+    @extend %text-heading-2;
+    color: $colour-primary;
+  }
+
+  h2 + p {
+    margin-top: 16px;
+  }
+
+  p {
+    @extend %text-button-md;
+    color: $colour-base-800;
+
+    a {
+      color: $colour-secondary;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.alert {
+  display: flex;
+  border: 1px solid $colour-error-100;
+  color: $colour-error-100;
+  background-color: $colour-error-200;
+  border-radius: 12px;
+  padding: 12px 16px;
+
+  p {
+    @extend %text-button-sm;
+  }
+}
+
+.alert2 {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: auto;
+  flex-direction: column;
+  padding: 40px 48px 48px;
+
+  .icon {
+    width: 48px;
+    height: 48px;
+    background-color: #ffe7e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+
+    svg {
+      font-size: 18px;
+      color: $colour-secondary;
+    }
+  }
+
+  p {
+    @extend %text-button-lg;
+    color: $colour-base-800;
+    max-width: 352px;
+    margin: auto;
+  }
+}
+
+.service {
+  text-transform: capitalize;
+}
+
+.isPro {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: flex-start;
+
+  svg {
+    color: $colour-secondary;
+    font-size: 20px;
+  }
+}
+
+.dotsCell {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tableBtn {
+  @extend %text-reset-button, %text-button-md;
+  color: $colour-primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: 1px solid #e2e9fc;
+  border-radius: 8px;
+  text-wrap: nowrap;
+  margin-right: 16px;
+
+  &:hover {
+    background-color: #fff;
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.studentMentorSlickItem {
+  padding-right: 32px;
+  height: 100%;
+
+  .studentMentorCard {
+    display: flex;
+    padding: 32px 24px;
+    gap: 24px;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid $colour-base-200;
+    min-height: 316px;
+    height: 100%;
+  }
+
+  .profileLink {
+    @extend %text-button-md;
+    color: $colour-secondary;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8px;
+    text-decoration: none;
+    text-align: left;
+
+    svg {
+      font-size: 24px;
+    }
+  }
+
+  .userIdentity {
+    padding: 0;
+    margin-bottom: 16px;
+  }
+
+  .hr {
+    border-top: 1px solid $colour-base-200;
+    width: 100%;
+  }
+
+  .buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .btn {
+    @extend %text-button-md;
+    color: $colour-base-800;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid $colour-base-200;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $colour-base-200;
+    }
+  }
+
+  .btnRed {
+    color: $colour-error-100;
+  }
+
+  .cardStatus {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 8px;
+    flex-direction: column;
+
+    p {
+      @extend %text-caption;
+      color: $colour-base-800;
+      min-height: 44px;
+    }
+  }
+}
+
+.modal {
+  .box {
+    max-width: 600px;
+  }
+  & h3 {
+    margin-top: 60px;
+    @include media-lg-and-up {
+      font-size: 28px !important;
+    }
+  }
+
+  .info {
+    @extend %text-body-1;
+    margin-bottom: 20px;
+    color: $colour-base-800;
+  }
+
+  .btnBox {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 20px;
+    border-top: 1px solid $colour-base-200;
+    & button {
+      @extend %text-button-md;
+    }
+    & .mainBtn {
+      background-color: $colour-error-200;
+      color: $colour-error-100;
+    }
+  }
+}
+.slick {
+  :global(.slick-list) {
+    padding-bottom: 18px;
+  }
+  :global(.slick-track) {
+    display: flex !important;
+  }
+  :global(.slick-slide) {
+    display: flex !important;
+    height: auto;
+    align-items: stretch;
+    justify-content: center;
+  }
+}

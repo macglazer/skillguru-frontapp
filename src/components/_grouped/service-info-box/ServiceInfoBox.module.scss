@@ -1,0 +1,55 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/mixins" as *;
+@use "../../../scss/main" as *;
+@use "../../../scss/font" as *;
+
+.infoBox {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+   border-radius: 14px;
+   padding: 24px;
+   background-color: $colour-base-200; 
+}
+
+.infoBox_title {
+    @extend %text-button-lg;
+    color: $colour-primary;
+}
+
+.infoBox_list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.infoBox__icon_wrapper {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: $colour-base-000;
+    color: $colour-primary;
+    border: 1px solid $colour-base-400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.infoBox_list svg {
+    width: 18px;
+    height: 18px;
+}
+
+.infoBox_list span {
+    flex: 1;
+}
+
+.infoBox_row {
+    @extend %text-caption;
+    color: $colour-base-800;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+}

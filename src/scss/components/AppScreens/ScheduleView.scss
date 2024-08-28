@@ -1,0 +1,60 @@
+@use '../../variables' as *;
+
+.schedule-form {
+	display: block;
+	padding: 25px 15px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+		rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+	border-radius: 14px;
+
+	&__scale {
+		margin-top: 15px;
+		width: 100px;
+	}
+
+	&__schedule {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		gap: 5px 20px;
+
+		> * {
+			grid-column: 1/-1;
+		}
+	}
+
+  .custom-btn{
+    margin-left: 24px;
+  }
+
+	@media screen and (min-width: $md) {
+		&__schedule {
+			> * {
+				&:nth-child(1) {
+					grid-column: span 6;
+				}
+				&:nth-child(2),
+				&:nth-child(3),
+				&:nth-child(6),
+				&:nth-child(7) {
+					grid-column: span 3;
+				}
+			}
+		}
+	}
+
+	@media screen and (min-width: $xxl) {
+		&__schedule {
+			> * {
+				&:nth-child(5),
+				&:nth-child(4) {
+					grid-column: span 3;
+				}
+
+        &:nth-child(6),
+				&:nth-child(7) {
+					grid-column: span 2;
+				}
+			}
+		}
+	}
+}

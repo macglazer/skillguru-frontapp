@@ -1,0 +1,159 @@
+@use '@styles/variables' as *;
+@use '@styles/font' as *;
+
+$sidebar-bg: $colour-primary;
+$sidebar-text: $colour-base-200;
+
+.quickSidebar {
+  position: fixed;
+  top: $layout-topbar-height;
+  left: 0;
+  height: calc(100vh - $layout-topbar-height);
+  width: $layout-quick-sidebar-width;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $sidebar-bg;
+  z-index: 2;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: 0;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media screen and (min-width: $sm) {
+    display: flex;
+  }
+}
+
+.fullSidebar {
+  position: fixed;
+  top: $layout-topbar-height;
+  left: 0;
+  height: calc(100vh - $layout-topbar-height);
+  width: 100%;
+  display: none;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+  background-color: $sidebar-bg;
+  z-index: 3;
+  overflow-y: auto;
+  transition: 0.2s;
+
+  .top {
+    display: none;
+  }
+
+  &.fullSidebarOpen {
+    display: flex;
+  }
+
+  .list {
+    gap: 12px;
+    padding: 24px;
+  }
+
+  .btn {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 12px;
+
+    span {
+      text-align: left;
+      font-size: 14px;
+    }
+
+    svg {
+    }
+  }
+
+  @media screen and (min-width: $sm) {
+    // background-color: blue;
+    max-width: $layout-full-sidebar-width;
+    position: fixed;
+    display: flex;
+    left: -$layout-full-sidebar-width;
+
+    &.fullSidebarOpen {
+        left: 0;
+    }
+  }
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+  padding: 4px;
+}
+
+.btn {
+  cursor: pointer;
+  align-items: center;
+  background-color: $sidebar-bg;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  width: calc($layout-quick-sidebar-width - 8px);
+
+  &[data-is-current="true"] {
+    background-color: $colour-secondary;
+
+    &:hover {
+      background-color: $colour-secondary;
+      cursor: default;
+    }
+  }
+
+  &:hover {
+    background-color: lighten($sidebar-bg, 10%);
+  }
+
+  span {
+    color: $sidebar-text;
+    font-size: 10px;
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  svg {
+    color: $sidebar-text;
+    height: 24px;
+    width: 24px;
+  }
+}
+
+.shadow {
+  display: none;
+  transition: 0.2s;
+
+  &.isSidebarOpen {
+    display: block;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    content: "";
+    z-index: 1;
+
+    @media screen and (min-width: $lg) {
+      display: none;
+    }
+  }
+}

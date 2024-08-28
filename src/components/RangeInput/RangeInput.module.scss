@@ -1,0 +1,55 @@
+@use '../../scss/variables' as *;
+
+.wrapper {
+	margin-top: 30px;
+	.label {
+		display: block;
+		color: #252b42;
+		font-size: 16px;
+		font-weight: 600;
+		letter-spacing: 0.16px;
+		margin-bottom: 34px;
+	}
+
+	.inputs {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		margin-top: 19px;
+		color: #252b42;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 1em;
+		letter-spacing: 0.16px;
+
+		input {
+			padding: 15px;
+			max-width: 90px;
+		}
+
+		.field {
+			max-height: max-content;
+
+			label > span {
+				display: none;
+			}
+		}
+	}
+
+	:global {
+		.range-slider {
+			height: 6px;
+			background-color: #f0eff2;
+			.range-slider__range {
+				background: $dark-color;
+			}
+			.range-slider__thumb {
+        height: 20px;
+        width: 20px;
+				background: $dark-color;
+				border: 2px solid $light-color;
+			}
+		}
+	}
+}

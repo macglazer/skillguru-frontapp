@@ -1,0 +1,59 @@
+@use '../../variables' as *;
+
+@mixin common {
+	display: block;
+	font-weight: 700;
+	margin-bottom: 0.5em;
+}
+
+.day-radio {
+	display: block;
+	width: max-content;
+	padding: 15px 20px;
+	border: 1px solid $gray-color;
+	border-radius: 8px;
+	text-align: center;
+	cursor: pointer;
+	transition: background-color 0.24s;
+
+	&__input {
+		display: none;
+		width: 0;
+		height: 0;
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	&__weekday {
+		@include common;
+		padding-top: 5px;
+		text-transform: capitalize;
+		font-size: 16px;
+	}
+
+	&__time {
+		font-weight: 700;
+		font-size: 16px;
+	}
+
+	&__date {
+		@include common;
+		font-size: 14px;
+	}
+
+	&__spots {
+		display: block;
+		color: $success-color;
+		font-weight: bold;
+		font-size: 12px;
+		padding-bottom: 5px;
+	}
+
+	&:hover {
+		background-color: rgba($primary-color, 0.075);
+	}
+
+	&[data-selected='true'] {
+		background-color: rgba($primary-color, 0.15);
+	}
+}

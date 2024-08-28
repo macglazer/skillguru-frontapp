@@ -1,0 +1,17 @@
+@use '../../../../../scss/variables' as *;
+@use '../../../../../scss/font' as *;
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.button {
+    @extend %text-button-md;
+}
+
+.checkbox label span {
+    @extend %text-button-sm; 
+    color: $colour-base-800;
+}

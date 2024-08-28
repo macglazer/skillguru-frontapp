@@ -1,0 +1,47 @@
+@use '../../../scss/variables' as *;
+@use '../../../scss/font' as *;
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 16.5px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.title {
+    @extend %text-button-md;
+    color: $colour-primary;
+    padding: 2.5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 12px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    color: $colour-warning-100;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    li > a {
+        @extend %text-caption;
+        color: $colour-base-800;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

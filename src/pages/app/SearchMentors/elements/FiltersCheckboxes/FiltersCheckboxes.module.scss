@@ -1,0 +1,54 @@
+@use "../../../../../scss/variables" as *;
+
+.checkboxes {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+}
+
+.btnMore {
+    color: $primary-color;
+    font-size: 14px;
+    line-height: 25.2px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.checkboxes + .btnMore {
+    margin-top: 16px;
+}
+
+.searchWrapper {
+    margin: 0 0 16px;
+    position: relative;
+    height: 40px;
+
+    svg {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+        z-index: 2;
+        font-size: 18px;
+        color: $colour-base-600;
+    }
+
+    input {
+        background-color: $colour-base-200;
+        height: 40px;
+        width: 100%;
+        border-radius: 16px;
+        padding-left: 36px;
+        color: $colour-base-600;
+        border: 1px solid transparent;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+    }
+
+    input:focus,
+    input:active {
+        border-color: $colour-base-400;
+        outline: none;
+    }
+}

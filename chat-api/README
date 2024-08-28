@@ -1,0 +1,142 @@
+### Install
+
+npm i
+
+### Run dev
+
+npm run dev
+
+### Requests
+
+Each request should have a body in JSON format, which will contain an object with a type (string) and a payload - depending on the sent type.
+
+#### on connect
+
+Once the connection is established, send the list of contacts ("contacts"), then mark the first one as selected, and separately send the list of messages ("messages").
+
+#### load-contacts
+
+This is a request to load more contacts (typically when the user scrolls down and needs to load more, or when searching by phrase)
+
+- `Payload` is optional.
+- `phrase` means searching by fullName.
+- `take` specifies how many records to retrieve.
+- `skip` skips the first x records.
+
+```json
+{
+  "type": "load-contacts",
+  "payload": {
+    "phrase": "string",
+    "take": "number",
+    "skip": "number"
+  }
+}
+```
+
+#### load-messages
+
+This is a request when the user wants to load more messages from the currently selected contact.
+
+- `contactId` - for security reasons - should be the same id as currently selected.
+- `take` - how many messages to load (default 15).
+- `beforeMessageId` - here, the ID of the last message, i.e., the oldest one the user has - skip this and newer ones.
+
+```json
+{
+  "type": "load-messages",
+  "payload": {
+    "contactId": "number",
+    "take": "number",
+    "beforeMessageId": "number"
+  }
+}
+```
+
+#### switch-contact
+
+Switch currently selected contact - here you should change the selected contact and send the initial payload of messages.
+
+```json
+{
+  "type": "switch-contact",
+  "payload": {
+    "contactId": "number"
+  }
+}
+```
+
+#### send-message
+
+Sending a message:
+
+recipient - for security, this should be the same ID as the currently selected one.
+text - message content.
+
+```json
+{
+  "type": "switch-contact",
+  "payload": {
+    "recipient": "number",
+    "text": "string"
+  }
+}
+```
+
+### Responses
+
+Each response should have a body in JSON format, which will contain an object with a type (string) and a payload - depending on the sent type.
+
+#### messages
+
+Return a list of messages (first 15) for the currently selected contact.
+
+```json
+{
+  "type": "messages",
+  "payload": {
+    "messages": [
+      {
+        "id": "number",
+        "fromId": "number",
+        "text": "string",
+        "date": "string"
+      }
+    ],
+    "total": "number"
+  }
+}
+```
+
+#### contacts
+
+Return a list of contacts (first 15).
+
+```json
+{
+  "type": "contacts",
+  "payload": {
+    "contacts": [
+      {
+        "id": "number",
+        "lastMessageDate": "string",
+        "unreadMessages": "number",
+        "fullName": "string",
+        "lastMessage": "string",
+        "avatarUrl": "string"
+      }
+    ],
+    "total": "number"
+  }
+}
+```
+
+### Use cases
+
+#### If the user receives a message from the currently selected contact
+
+Send "messages" with that single message - on the frontend, sort them by date.
+
+#### If the user receives a message from another, non-selected contact
+
+Send "contacts" with that updated contact (changes will include: lastMessageDate, unreadMessages, lastMessage).

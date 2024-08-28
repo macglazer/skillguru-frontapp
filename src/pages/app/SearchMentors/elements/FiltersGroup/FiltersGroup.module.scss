@@ -1,0 +1,16 @@
+@use '../../../../../scss/variables' as *;
+
+.wrapper {
+    font-family: $font-family-montserrat;
+}
+
+.title {
+    color: $secondary-color;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 28.8px;
+}
+
+.title + .content {
+    margin-top: 24px;
+}

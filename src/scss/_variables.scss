@@ -1,12 +1,45 @@
-$primary-color: #0069ff;
-$secondary-color: #b0cdff;
-$light-color: #f9fafe;
-$dark-color: #031b4e;
-$gray-color: #7a7a7a;
-$success-color: #1fc198;
-$danger-color: #ff4c6c;
+/* old colour tokens */
+$primary-color: #FF6A3D;
+$secondary-color: #252B61;
+$link-color: #1176FF;
+$light-color: #fff;
+$dark-color: #252B42;
+$text-color: #252B42;
+$gray-color: #F8F8FB;
+$new-gray-color: #E2E9FC;
+$success-color: #34C759;
+$danger-color: #E17596;
+$yellow-color: #F0DA69;
+
+/* new colour tokens */
+$colour-primary: #252B61;
+$colour-secondary: #FF6A3D;
+$colour-base-000: #FFFFFF;
+$colour-base-200: #F8F8FB;
+$colour-base-400: #E2E9FC;
+$colour-base-600: #8E9ABB;
+$colour-base-800: #56658F;
+$colour-error-100: #F51F59;
+$colour-error-200: #F9EBEB;
+$colour-success-100: #34C759;
+$colour-success-200: #EBF9EE;
+$colour-warning-100: #FCA004;
+$colour-warning-200: #FFFBED;
+
+$font-base: 10px;
+
+/* font family */
+$font-family-montserrat: "Montserrat", sans-serif;
+$font-family-poppins: "Poppins", sans-serif;
+
+/* font weight */
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
 
 $font-size: (
+	xxs: 12px,
 	xs: 14px,
 	sm: 16px,
 	md: 18px,
@@ -25,4 +58,24 @@ $breakpoints: (
 	xxl: 1400px,
 );
 
+$xs: 414px;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
 $duration: 0.25s;
+
+$box-border-colour: $colour-base-400;
+$box-border: 1px solid $box-border-colour;
+$box-border-radius: 14px;
+
+%box-border {
+	border: $box-border;
+	border-radius: $box-border-radius;
+}
+
+$layout-topbar-height: 73px;
+$layout-topbar-inner-height: 40px;
+$layout-quick-sidebar-width: 68px; 
+$layout-full-sidebar-width: 280px;

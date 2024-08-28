@@ -1,0 +1,137 @@
+@use "@styles/variables" as *;
+@use "@styles/mixins" as *;
+@use "@styles/font" as *;
+
+.container {
+  max-width: 400px;
+  > div {
+    padding: 0;
+  }
+
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 12px;
+    border: 1px solid $colour-base-400;
+    border-radius: 8px;
+  }
+
+  .subtitle {
+    @extend %text-button-md;
+    color: $colour-primary;
+  }
+
+  input,
+  textarea {
+    outline: none;
+  }
+}
+
+.containerPlan {
+  width: 100%;
+  padding: 24px 20px;
+  border: 1px solid $colour-base-400;
+  border-radius: 24px;
+  color: $colour-base-800;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &[data-variant="pro"] {
+    border: 2px solid $colour-secondary;
+  }
+
+  .title {
+    @extend %text-subtitle-1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: $colour-primary;
+    margin-bottom: 12px;
+  }
+
+  .priceBox {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .priceValue {
+      @extend %text-heading-3;
+      padding: 4px 16px;
+      max-width: 280px;
+      border: 1px solid $colour-base-400;
+      border-radius: 8px;
+      color: $colour-primary;
+    }
+    .priceCurrency {
+      @extend %text-heading-3;
+      color: $colour-primary;
+    }
+
+    .pricePeriod {
+      @extend %text-button-md;
+    }
+  }
+
+  .description {
+    @extend %text-caption;
+    padding: 8px;
+    min-height: 64px;
+    width: 100%;
+    border: 1px solid $colour-base-400;
+    border-radius: 8px;
+    color: $colour-base-600;
+    resize: vertical;
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .listItem {
+      @extend %text-caption;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      .listIcon {
+        width: 18px;
+        height: 18px;
+        background-color: $colour-primary;
+        color: $colour-base-000;
+        border-radius: 10px;
+      }
+
+      .info {
+        min-height: 60px;
+        border: 1px solid $colour-base-400;
+        border-radius: 8px;
+        width: 100%;
+      }
+    }
+  }
+  .addNew {
+    @extend %text-button-sm;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: transparent;
+    color: $colour-secondary;
+    cursor: pointer;
+  }
+}
+
+.select {
+  height: 38px;
+  width: 100%;
+  
+  & .css-1xc3v61-indicatorContainer {
+    padding: 0 6px;
+  }
+  & svg {
+    fill: red !important;
+  }
+}

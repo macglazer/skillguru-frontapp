@@ -1,0 +1,61 @@
+@use '../variables' as *;
+
+.calendar-wrapper {
+	margin-top: 64px;
+
+	.rbc-calendar {
+		min-width: $xs;
+    height: clamp(500px, 50vw, 50vw)!important;
+	}
+  
+  .rbc-toolbar-label{
+    max-width: max-content;
+    font-weight: 700;
+  }
+
+  .rbc-toolbar {
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  button.rbc-event-allday{
+    background-color: $primary-color;
+  }
+
+  .rbc-row-content{
+    z-index: auto;
+    .rbc-row {
+      padding-bottom: 5px;
+    }
+  }
+
+  .rbc-month-row{
+    overflow: visible;
+  }
+
+  @media screen and (max-width: 450px) {
+		overflow-x: scroll;
+	}
+}
+
+.meet-details{
+  .app__title{
+    margin: 1em 0;
+
+    &:first-of-type{
+      margin-top: 0;
+    }
+  }
+  hr{
+    margin: 24px 0;
+  }
+
+  .input{
+    margin-top: 1em;
+  }
+
+  &__cancel{
+    display: block;
+    width: 100%;
+  }
+}

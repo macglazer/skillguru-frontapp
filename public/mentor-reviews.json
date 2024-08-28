@@ -1,0 +1,111 @@
+{
+    "total": 50,
+    "reviews": [
+        {
+            "id": "#1",
+            "rate": 4.87,
+            "title": "Coś wspaniałego" ,
+            "authorName": "Kasia" ,
+            "createdAt": "2024-01-15" ,
+            "content": "Figma ipsum component variant main layer. Comment clip bold list layout outline share edit font. Object italic scale blur editor."
+        }, {
+            "id": "#2",
+            "rate": 4.87,
+            "title": "Coś wspaniałego" ,
+            "authorName": "Kasia" ,
+            "createdAt": "2024-01-15" ,
+            "content": "Figma ipsum component variant main layer. Comment clip bold list layout outline share edit font. Object italic scale blur editor."
+        }, {
+            "id": "#3",
+            "rate": 4.87,
+            "title": "Coś wspaniałego" ,
+            "authorName": "Kasia" ,
+            "createdAt": "2024-01-15" ,
+            "content": "Figma ipsum component variant main layer. Comment clip bold list layout outline share edit font. Object italic scale blur editor."
+        }, {
+            "id": "#4",
+            "rate": 4.87,
+            "title": "Coś wspaniałego" ,
+            "authorName": "Kasia" ,
+            "createdAt": "2024-01-15" ,
+            "content": "Figma ipsum component variant main layer. Comment clip bold list layout outline share edit font. Object italic scale blur editor."
+        }, {
+            "id": "#5",
+            "rate": 4.87,
+            "title": "Coś wspaniałego" ,
+            "authorName": "Kasia" ,
+            "createdAt": "2024-01-15" ,
+            "content": "Figma ipsum component variant main layer. Comment clip bold list layout outline share edit font. Object italic scale blur editor."
+        }, {
+            "id": "#6",
+            "rate": 4.87,
+            "title": "Coś wspaniałego" ,
+            "authorName": "Kasia" ,
+            "createdAt": "2024-01-15" ,
+            "content": "Figma ipsum component variant main layer. Comment clip bold list layout outline share edit font. Object italic scale blur editor."
+        }, {
+            "id": "#7",
+            "rate": 4.87,
+            "title": "Coś wspaniałego" ,
+            "authorName": "Kasia" ,
+            "createdAt": "2024-01-15" ,
+            "content": "Figma ipsum component variant main layer. Comment clip bold list layout outline share edit font. Object italic scale blur editor."
+        }, {
+            "id": "#8",
+            "rate": 4.87,
+            "title": "Coś wspaniałego" ,
+            "authorName": "Kasia" ,
+            "createdAt": "2024-01-15" ,
+            "content": "Figma ipsum component variant main layer. Comment clip bold list layout outline share edit font. Object italic scale blur editor."
+        }, {
+            "id": "#9",
+            "rate": 4.87,
+            "title": "Coś wspaniałego" ,
+            "authorName": "Kasia" ,
+            "createdAt": "2024-01-15" ,
+            "content": "Figma ipsum component variant main layer. Comment clip bold list layout outline share edit font. Object italic scale blur editor."
+        }, {
+            "id": "#10",
+            "rate": 4.87,
+            "title": "Coś wspaniałego" ,
+            "authorName": "Kasia" ,
+            "createdAt": "2024-01-15" ,
+            "content": "Figma ipsum component variant main layer. Comment clip bold list layout outline share edit font. Object italic scale blur editor."
+        }, {
+            "id": "#11",
+            "rate": 4.87,
+            "title": "Coś wspaniałego" ,
+            "authorName": "Kasia" ,
+            "createdAt": "2024-01-15" ,
+            "content": "Figma ipsum component variant main layer. Comment clip bold list layout outline share edit font. Object italic scale blur editor."
+        }, {
+            "id": "#12",
+            "rate": 4.87,
+            "title": "Coś wspaniałego" ,
+            "authorName": "Kasia" ,
+            "createdAt": "2024-01-15" ,
+            "content": "Figma ipsum component variant main layer. Comment clip bold list layout outline share edit font. Object italic scale blur editor."
+        }, {
+            "id": "#13",
+            "rate": 4.87,
+            "title": "Coś wspaniałego" ,
+            "authorName": "Kasia" ,
+            "createdAt": "2024-01-15" ,
+            "content": "Figma ipsum component variant main layer. Comment clip bold list layout outline share edit font. Object italic scale blur editor."
+        }, {
+            "id": "#14",
+            "rate": 4.87,
+            "title": "Coś wspaniałego" ,
+            "authorName": "Kasia" ,
+            "createdAt": "2024-01-15" ,
+            "content": "Figma ipsum component variant main layer. Comment clip bold list layout outline share edit font. Object italic scale blur editor."
+        }, {
+            "id": "#15",
+            "rate": 4.87,
+            "title": "Coś wspaniałego" ,
+            "authorName": "Kasia" ,
+            "createdAt": "2024-01-15" ,
+            "content": "Figma ipsum component variant main layer. Comment clip bold list layout outline share edit font. Object italic scale blur editor."
+        }
+    ]
+}

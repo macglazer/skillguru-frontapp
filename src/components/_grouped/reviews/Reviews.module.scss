@@ -1,0 +1,99 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/main" as *;
+@use "../../../scss/_mixins" as *;
+
+.reviewsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: pxToRem(24);
+  padding: 24px 0 24px;
+
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+
+    @include media-md-and-up {
+      justify-content: flex-start;
+      gap: 24px;
+    }
+  }
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: pxToRem(16);
+
+    @include media-md-and-up {
+      flex-direction: row;
+      gap: pxToRem(24);
+    }
+  }
+
+  .item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+  }
+
+  .item_title {
+    @extend %text-button-md;
+    color: $colour-base-800;
+  }
+
+  * + .item_title {
+    margin-top: 8px;
+  }
+
+  .item_subtitle {
+    @extend %text-caption;
+    color: $colour-base-600;
+  }
+
+  .item_content {
+    @extend %text-caption;
+    color: $colour-base-600;
+  }
+
+  * + .item_content {
+    margin-top: 12px;
+  }
+
+  .footer {
+    margin-bottom: pxToRem(24);
+    background-color: transparent;
+  }
+
+  .stars {
+    display: flex;
+    gap: 4px;
+  }
+
+  .header_subtitle {
+    @extend %text-caption;
+    color: $colour-primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .header_title {
+    @extend %text-subtitle-1;
+    color: $colour-primary;
+  }
+
+  .skeleton_row_flex {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
+  }
+}
+
+.msg {
+  @extend %text-button-md;
+  color: $colour-base-600;
+}

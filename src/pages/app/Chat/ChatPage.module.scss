@@ -1,0 +1,56 @@
+@use "@styles/variables" as *;
+@use "@styles/mixins" as *;
+@use "@styles/font" as *;
+
+.title {
+  font-size: 28px !important;
+  margin-top: 20px;
+  letter-spacing: -1px;
+  color: $colour-primary;
+  @include media-xl-and-up {
+    font-size: 32px !important;
+  }
+}
+
+.container {
+  padding: 0 4px;
+  @include media-xl-and-up {
+    padding: 0 8px;
+  }
+}
+
+.gridContainer {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  @include media-xl-and-up {
+    grid-template-columns: 325px 1fr;
+    gap: 20px;
+  }
+}
+
+.unreadMsg {
+  @extend %text-button-md;
+  display: none;
+  @media (min-width: $xs) {
+    display: block;
+    width: 188px;
+    padding: 10px 12px;
+    border: 1px solid $colour-base-200;
+    border-radius: 50px;
+    background-color: $colour-base-200;
+    text-align: center;
+    color: $colour-secondary;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  @include media-xl-and-up {
+    margin-top: 20px;
+  }
+}

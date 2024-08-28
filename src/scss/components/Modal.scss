@@ -20,7 +20,7 @@
 		border-radius: 10px;
 		padding: 48px 15px 25px;
 		width: 100%;
-		max-width: 768px;
+		max-width: 1024px;
 		max-height: 100vh;
 		overflow-x: hidden;
 		overflow-y: scroll;
@@ -62,6 +62,7 @@
 	}
 
 	&__button {
+		width: 100%;
 		border: none;
 		background-color: transparent;
 	}

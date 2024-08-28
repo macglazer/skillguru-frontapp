@@ -1,0 +1,45 @@
+@use "../../../scss/variables" as *;
+
+.switcher {
+    display: inline-flex;
+    position: relative;
+    width: 48px;
+    height: 24px;
+    border-radius: 20px;
+    background-color: $colour-base-400;
+    transition: .3s;
+    cursor: pointer;
+
+    &::after {
+        display: block;
+        position: absolute;
+        background-color: $colour-base-000;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        top: 4px;
+        left: 4px;
+        transition: .3s;
+        content: '';
+    }
+
+    &.checked {
+        background-color: $colour-success-100;
+
+        &::after {
+            left: 28px;
+        }
+    }
+
+    &.disabled {
+        background-color: $colour-base-600;
+        cursor: default;
+    }
+
+    input {
+        visibility: hidden;
+        z-index: 2;
+        width: 100%;
+    }
+}
+

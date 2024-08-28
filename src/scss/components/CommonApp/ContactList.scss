@@ -1,0 +1,14 @@
+.contact-list {
+	.app__title {
+		margin-top: 20px;
+	}
+
+	&__list {
+    display: flex;
+    flex-direction: column;
+		gap: 16px;
+    max-height: 90vh;
+    overflow-y: scroll;
+    max-width: 400px;
+	}
+}

@@ -8,13 +8,15 @@
 	width: 100%;
 
 	&__view {
+		position: relative;
+		z-index: 999;
 		padding-top: 24px;
 		grid-column: 1/-1;
 		grid-row: 2/3;
 		padding-bottom: 64px;
 	}
 
-	@media screen and(min-width: map-get($breakpoints, 'lg')) {
+	@media screen and (min-width: map-get($breakpoints, 'lg')) {
 		&__view {
 			grid-column: 2/-1;
 		}

@@ -1,0 +1,22 @@
+@use 'src/scss/variables' as *;
+
+.fieldText {
+	display: block;
+	padding-bottom: 19px;
+}
+
+.date{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
+	align-items: center;
+
+	.fieldText{
+		margin-bottom: 0;
+	}
+
+	& > * {
+		flex: 1;
+		min-width: unset;
+	}
+}

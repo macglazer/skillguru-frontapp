@@ -1,0 +1,122 @@
+{
+  "categories": [
+    {
+      "label": "Biznes",
+      "value": "frontend_1"
+    },
+    {
+      "label": "IT",
+      "value": "frontend_2"
+    },
+    {
+      "label": "Marketing",
+      "value": "frontend_3"
+    },
+    {
+      "label": "UI & UX",
+      "value": "frontend_4"
+    },
+    {
+      "label": "Rozwój",
+      "value": "frontend_5"
+    }
+  ],
+  "skills": [
+    {
+      "label": "Figma",
+      "value": "figma"
+    },
+    {
+      "label": "Photoshop",
+      "value": "photoshop"
+    },
+    {
+      "label": "Canva",
+      "value": "canva"
+    },
+    {
+      "label": "Excel",
+      "value": "excel"
+    },
+    {
+      "label": "Java",
+      "value": "skill_5"
+    },
+    {
+      "label": "ORACLE",
+      "value": "skill_6"
+    },
+    {
+      "label": "JIRA",
+      "value": "skill_7"
+    },
+    {
+      "label": "INTELIJ",
+      "value": "skill_8"
+    },
+    {
+      "label": "Rozwiązywanie problemów",
+      "value": "skill_9"
+    }
+  ],
+  "services": [
+    {
+      "label": "Regularne spotkania",
+      "value": "service_5"
+    },
+    {
+      "label": "Praca z Zadaniami",
+      "value": "service_6"
+    },
+    {
+      "label": "Weekendowe Spotkania",
+      "value": "service_7"
+    },
+    {
+      "label": "Tylko Sesje",
+      "value": "service_8"
+    },
+    {
+      "label": "Intensywna Praca",
+      "value": "service_9"
+    },
+    {
+      "label": "Chat",
+      "value": "service_10"
+    },
+    {
+      "label": "Mentoring Grupowy",
+      "value": "service_11"
+    },
+    {
+      "label": "Warsztaty Tematyczne",
+      "value": "service_12"
+    }
+  ],
+  "topics": [
+    {
+      "label": "Programowanie",
+      "value": "service_5"
+    },
+    {
+      "label": "Konsultacja z Ekspertem",
+      "value": "service_6"
+    },
+    {
+      "label": "IT Development",
+      "value": "service_7"
+    },
+    {
+      "label": "Mentoring w IT",
+      "value": "service_8"
+    },
+    {
+      "label": "Zmiana Pracy",
+      "value": "service_9"
+    },
+    {
+      "label": "Zmiana_Pracy",
+      "value": "service_10"
+    }
+  ]
+}

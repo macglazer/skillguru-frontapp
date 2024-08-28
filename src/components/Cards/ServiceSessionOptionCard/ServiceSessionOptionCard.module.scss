@@ -1,0 +1,71 @@
+@use "../../../scss/variables" as *;
+@use "../../../scss/font" as *;
+
+.card {
+    border: 1px solid $colour-base-400;
+    border-radius: 16px;
+    background-color: transparent;
+    padding: 24px 24px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    &.selectable {
+        cursor: pointer;
+    }
+
+    &.selected {
+        border-color: $colour-secondary;
+    }
+
+    &:hover {
+        background-color: $colour-base-200;
+    }
+}
+
+.rowTitle {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: flex-start;
+
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.selected .rowTitle svg {
+    color: $colour-secondary;
+}
+
+.title {
+    @extend %text-button-md;
+    color: $colour-primary;
+}
+
+.rowInfo {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.infoCell {
+    @extend %text-caption;
+    color: $colour-base-600;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.rowActions {
+    @extend %text-reset-button, %text-button-sm;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    color: $colour-secondary;
+    cursor: pointer;
+}

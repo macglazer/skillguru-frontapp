@@ -1,18 +1,33 @@
 @use '../../variables' as *;
+@use 'sass:map';
 
 .user-profile {
 	&__grid {
+		position: relative;
 		display: grid;
 		width: 100%;
-		grid-template-columns: 3fr 1fr;
+		grid-template-columns: 4fr 3fr;
 		grid-template-rows: auto auto auto;
-		gap: 20px;
+		gap: 30px;
 		margin-top: 32px;
+
+		&:before {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			display: block;
+			width: calc(100% + 32px);
+			height: 220px;
+			top: -56px;
+			left: -16px;
+			background-color: darken($primary-color, 5%);
+		}
 	}
 
 	&__data,
+	&__data-info,
 	&__about,
-	&__investment-info {
+	&__price {
 		grid-column: 1/-1;
 	}
 
@@ -21,11 +36,11 @@
 
 		&-photo {
 			position: relative;
-			width: 150px;
-			height: 150px;
+			width: 200px;
+			height: 200px;
 			margin-right: 25px;
 			border-radius: 50%;
-			border: 10px solid #b6b6b6;
+			border: 5px solid #fff;
 			overflow: hidden;
 
 			img {
@@ -42,97 +57,39 @@
 
 			.info {
 				&__name {
-					font-size: 28px;
+					font-size: 26px;
 					letter-spacing: 0.2px;
 				}
 				&__position {
-					font-size: 20px;
-					font-weight: 300;
-					margin-bottom: 10px;
-				}
-				&__company {
-					font-size: 18px;
-					font-weight: 400;
-				}
-				&__industry {
 					font-size: 16px;
 					font-weight: 400;
+					margin: 10px 0;
 				}
-				&__actions {
-					padding-top: 20px;
-					gap: 20px;
+				&__description {
+					font-size: 16px;
+					color: $primary-color;
+					max-width: 516px;
 				}
 			}
 		}
 	}
 
 	&__about {
-		grid-row: 2/3;
+		grid-row: 4/5;
+		border-top: 1px solid rgba($gray-color, 0.5);
+		margin-top: 20px;
 	}
 
-	&__investment-info {
-		grid-row: 3/4;
+	@media screen and (min-width: map-get($breakpoints, 'md')) {
 
-		.investment-info {
-			&__activity,
-			&__investments {
-        margin-bottom: 20px;
-				padding: 25px 15px;
-				box-shadow: 0 0 5px rgba($dark-color, 0.2);
-				border-radius: 8px;
-			}
-
-			&__header {
-				width: 100%;
-				font-size: 20px;
-				margin-bottom: 20px;
-
-				&:has(span){
-					text-align: left;
-				}
-
-				&.mb-0{
-					margin-bottom: 0;
-				}
-
-				span{
-					color: $dark-color;
-				}
-			}
-
-			&__info {
-        margin-top: 15px;
-				font-size: 16px;
-				font-weight: 300;
-        text-align: center;
-
-        &--big{
-          font-size: 20px;
-          font-weight: 700;
-        }
-			}
-
-      &__list{
-        &-item{
-          font-weight: 400;
-          padding: 12px 8px;
-          border-bottom: 1px solid $primary-color;
-
-          &:last-of-type{
-            border-bottom: none;
-          }
-        }
-      }
-		}
-	}
-
-	@media screen and(min-width: 1350px) {
 		&__data,
-		&__about {
+		&__data-info {
 			grid-column: 1/2;
 		}
-
-		&__investment-info {
+		&__about {
+			grid-row: 3/4;
+		}
+		&__price {
 			grid-column: 2/3;
 			grid-row: 1/-1;
 		}

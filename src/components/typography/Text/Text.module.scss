@@ -1,0 +1,9 @@
+@use '../../../scss/variables' as *;
+
+.text {
+	color: $text-color;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.6em;
+}
