@@ -11,6 +11,7 @@ const useResolveAppMessages = () => {
     const authState = useSelector((state: any) => state.auth);
 
     useEffect(() => {
+        console.log('authState.user?.stripeIntegrationStatus: ',authState.user?.stripeIntegrationStatus)
         if (!authState.user?.stripeIntegrationStatus && authState.user?.role === "M") {
             dispatchMessage({
                 type: "SET_MESSAGE",
