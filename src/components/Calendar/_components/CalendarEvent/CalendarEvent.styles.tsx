@@ -3,7 +3,7 @@ import {ButtonBase, styled as styledMui, alpha} from "@mui/material";
 export const StyledCalendarEvent = styledMui(ButtonBase)<{color: 'primary' | 'secondary'}>(({theme, color}) => ({
     backgroundColor: color === 'primary' ? alpha(theme.palette.primary.main, 0.1) : theme.palette.base['20'],
     color: theme.palette[color].main,
-    padding: theme.spacing(.25, 1),
+    padding: theme.spacing(.5, 1),
     display: 'grid',
     gridTemplateColumns: 'auto 1fr',
     gap: theme.spacing(1),

@@ -15,7 +15,6 @@ import { subscriptionsReducer } from './subscriptions';
 import { mentAppReducer } from './mentorship-application';
 import { layoutReducer } from './layout';
 import { schedulesReducer } from './schedules';
-import {userMessagesReducer} from "./userMessages/userMessagesReducer";
 
 const rootReducer = combineReducers({
     auth: authReducer,
@@ -33,7 +32,6 @@ const rootReducer = combineReducers({
     mentApp: mentAppReducer,
     layout: layoutReducer,
     schedules: schedulesReducer,
-    userMessages: userMessagesReducer,
     // Add other reducers if you have them
 });
 

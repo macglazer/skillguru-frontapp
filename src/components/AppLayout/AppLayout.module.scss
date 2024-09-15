@@ -1,13 +1,11 @@
 @use '../../scss/variables' as *;
 
-
 .content {
 	min-height: calc(100vh - $layout-topbar-height);
 	margin-top: $layout-topbar-height;
 	background-color: $colour-base-000;
 	overflow: hidden;
 	z-index: 1;
-	transition: margin-top 0.24s ease-in-out, min-height 0.24s ease-in-out;
 
 	@media screen and (min-width: $sm) {
 		margin-left: $layout-quick-sidebar-width;
@@ -18,11 +16,4 @@
 			margin-left: $layout-full-sidebar-width;
 		}
 	}
-}
-
-$combined-height: $layout-topbar-user-info-height + $layout-topbar-height;
-
-.contentWithUserTopInfo {
-	min-height: calc(100vh - $combined-height);
-	margin-top: $combined-height;
 }

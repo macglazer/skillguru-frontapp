@@ -24,7 +24,7 @@ type Props = {
     calendarProps: Pick<CalendarProps, 'events' | 'onNavigate'>
 }
 
-const CELL_SIZE = 160
+const CELL_SIZE = 150
 
 const Calendar: FC<Props> = ({calendarProps}) => {
 
@@ -38,7 +38,6 @@ const Calendar: FC<Props> = ({calendarProps}) => {
                     toolbar: CalendarToolbar,
                     header: CalendarHeader,
                     month: {dateHeader: CalendarDateHeader},
-                    // @ts-ignore
                     eventWrapper: CalendarEvent,
                 }}
                  // In RBC show more logic is messy, so I need to achieve it in other way

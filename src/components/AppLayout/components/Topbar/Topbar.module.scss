@@ -4,17 +4,17 @@
 .topbar {
   width: 100%;
   height: $layout-topbar-height;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  position: fixed;
   top: 0;
   right: 0;
   background-color: #fff;
   border-bottom: 1px solid #eee;
   box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.1);
   z-index: 10;
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 16px;
 
   @media screen and (min-width: $sm) {
     padding-left: calc($layout-quick-sidebar-width + 12px);
