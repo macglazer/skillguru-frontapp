@@ -1,0 +1,64 @@
+@use '@styles/variables' as *;
+
+.container {
+  height: $layout-topbar-user-info-height;
+  top: $layout-topbar-height;
+  right: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  padding: 12px 24px 12px calc($layout-quick-sidebar-width + 12px);
+
+  @media screen and (max-width: $sm) {
+    padding-left: 12px;
+  }
+}
+
+.content {
+  color: $colour-base-000;
+  display: grid;
+  align-items: center;
+  gap: 12px;
+  grid-template-columns: auto 1fr;
+}
+
+.isSidebarOpen {
+  padding-left: calc($layout-full-sidebar-width + 12px);
+
+  @media screen and (max-width: $sm) {
+    padding-left: 12px;
+  }
+}
+
+%font {
+  color: $colour-base-000 !important;
+  font-weight: 600;
+  @media screen and (max-width: $md) {
+    font-size: 1.25rem !important;
+    line-height: 140% !important;
+  }
+}
+
+.text {
+  @extend %font;
+
+  & a {
+    @extend %font
+  }
+}
+
+.error {
+  background: $colour-error-100;
+}
+
+.warning {
+  background: $colour-warning-100;
+}
+
+.info {
+  background: $colour-primary;
+}
